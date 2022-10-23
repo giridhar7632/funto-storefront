@@ -2,12 +2,12 @@ import repeat from "@lib/util/repeat"
 
 const SkeletonProductTabs = () => {
   return (
-    <div className="flex flex-col animate-pulse w-full">
+    <div className="flex w-full animate-pulse flex-col">
       <div className="flex items-center gap-x-6 border-b border-gray-100 pb-2">
         {repeat(2).map((index) => (
           <div
             key={index}
-            className="h-6 pb-2 w-12 bg-gray-100 flex-1 basis-0"
+            className="h-6 w-12 flex-1 basis-0 bg-gray-100 pb-2"
           ></div>
         ))}
       </div>
@@ -17,8 +17,8 @@ const SkeletonProductTabs = () => {
             <div className="flex flex-col gap-y-4" key={index}>
               {repeat(3).map((index) => (
                 <div className="flex flex-col gap-y-2" key={index}>
-                  <div className="bg-gray-100 h-4 w-32"></div>
-                  <div className="bg-gray-100 h-2 w-16"></div>
+                  <div className="h-4 w-32 bg-gray-100"></div>
+                  <div className="h-2 w-16 bg-gray-100"></div>
                 </div>
               ))}
             </div>

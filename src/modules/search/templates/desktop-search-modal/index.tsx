@@ -12,7 +12,7 @@ const DesktopSearchModal = () => {
 
   return (
     <>
-      <button onClick={open} className="flex items-center gap-x-2 h-full">
+      <button onClick={open} className="flex h-full items-center gap-x-2">
         <Search />
         Search
       </button>
@@ -23,13 +23,13 @@ const DesktopSearchModal = () => {
             indexName={SEARCH_INDEX_NAME}
             searchClient={searchClient}
           >
-            <div className="flex flex-col h-full">
-              <div className="w-full flex items-center gap-x-2 bg-gray-50 p-4">
+            <div className="flex h-full flex-col">
+              <div className="flex w-full items-center gap-x-2 bg-gray-50 p-4">
                 <Search />
                 <SearchBox />
               </div>
 
-              <div className="overflow-y-scroll flex-1 no-scrollbar mt-6">
+              <div className="no-scrollbar mt-6 flex-1 overflow-y-scroll">
                 <DesktopHits hitComponent={DesktopHit} />
               </div>
             </div>

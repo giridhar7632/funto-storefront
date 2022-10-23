@@ -1,7 +1,7 @@
 const MedusaCTA = () => {
   return (
-    <div className="py-4 flex justify-center items-center w-full">
-      <div className="content-container flex justify-center flex-1">
+    <div className="flex w-full items-center justify-center py-4">
+      <div className="content-container flex flex-1 justify-center">
         <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
           <PoweredBy />
         </a>

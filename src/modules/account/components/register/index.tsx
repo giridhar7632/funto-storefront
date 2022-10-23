@@ -42,14 +42,14 @@ const Register = () => {
   })
 
   return (
-    <div className="max-w-sm flex flex-col items-center mt-12">
-      <h1 className="text-large-semi uppercase mb-6">Become a Acme Member</h1>
-      <p className="text-center text-base-regular text-gray-700 mb-4">
+    <div className="mt-12 flex max-w-sm flex-col items-center">
+      <h1 className="text-large-semi mb-6 uppercase">Become a Acme Member</h1>
+      <p className="text-base-regular mb-4 text-center text-gray-700">
         Create your Acme Member profile, and get access to an enhanced shopping
         experience.
       </p>
-      <form className="w-full flex flex-col" onSubmit={onSubmit}>
-        <div className="flex flex-col w-full gap-y-2">
+      <form className="flex w-full flex-col" onSubmit={onSubmit}>
+        <div className="flex w-full flex-col gap-y-2">
           <Input
             label="First name"
             {...register("first_name", { required: "First name is required" })}
@@ -86,12 +86,12 @@ const Register = () => {
         </div>
         {authError && (
           <div>
-            <span className="text-rose-500 w-full text-small-regular">
+            <span className="text-small-regular w-full text-rose-500">
               These credentials do not match our records
             </span>
           </div>
         )}
-        <span className="text-center text-gray-700 text-small-regular mt-6">
+        <span className="text-small-regular mt-6 text-center text-gray-700">
           By creating an account, you agree to Acme&apos;s{" "}
           <Link href="/content/privacy-policy">
             <a className="underline">Privacy Policy</a>
@@ -104,7 +104,7 @@ const Register = () => {
         </span>
         <Button className="mt-6">Join</Button>
       </form>
-      <span className="text-center text-gray-700 text-small-regular mt-6">
+      <span className="text-small-regular mt-6 text-center text-gray-700">
         Already a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}

@@ -9,7 +9,7 @@ const InfoContainer: React.FC<{ label: string }> = ({ label, children }) => {
         <span className="text-small-semi">{label}</span>
         {children}
       </div>
-      <div className="lg:hidden mb-3">
+      <div className="mb-3 lg:hidden">
         <Collapsible label={label}>{children}</Collapsible>
       </div>
     </div>
@@ -23,14 +23,14 @@ const Collapsible: React.FC<{ label: string }> = ({ label, children }) => {
         {({ open }) => {
           return (
             <>
-              <Disclosure.Button className="text-gray-900 flex items-center justify-between w-full">
+              <Disclosure.Button className="flex w-full items-center justify-between text-gray-900">
                 <span className="text-small-semi uppercase">{label}</span>
                 <AnimatedButton open={open} />
               </Disclosure.Button>
               <Disclosure.Panel
                 static
                 className={clsx(
-                  "transition-[max-height,opacity] duration-700 ease-in-out overflow-hidden",
+                  "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
                   {
                     "max-h-[300px] opacity-100": open,
                     "max-h-0 opacity-0": !open,
@@ -51,11 +51,11 @@ const Collapsible: React.FC<{ label: string }> = ({ label, children }) => {
 
 const AnimatedButton = ({ open }: { open: boolean }) => {
   return (
-    <div className="w-[15px] h-[15px] relative cursor-pointer">
-      <div className="bg-gray-900 absolute top-[7px] inset-x-0 h-px" />
+    <div className="relative h-[15px] w-[15px] cursor-pointer">
+      <div className="absolute inset-x-0 top-[7px] h-px bg-gray-900" />
       <div
         className={clsx(
-          "bg-gray-900 absolute left-[7px] inset-y-0 w-px transition-all duration-300 ease-out",
+          "absolute inset-y-0 left-[7px] w-px bg-gray-900 transition-all duration-300 ease-out",
           { "rotate-90": open }
         )}
       />

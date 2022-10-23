@@ -1,7 +1,7 @@
 const SkeletonLineItem = () => {
   return (
-    <div className="grid grid-cols-[122px_1fr] gap-x-4 animate-pulse">
-      <div className="w-[122px] h-[143px] bg-gray-200" />
+    <div className="grid animate-pulse grid-cols-[122px_1fr] gap-x-4">
+      <div className="h-[143px] w-[122px] bg-gray-200" />
       <div className="text-base-regular flex items-start justify-between">
         <div>
           <div className="flex flex-col gap-y-2">

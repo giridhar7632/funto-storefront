@@ -20,8 +20,8 @@ const CountryMenu = () => {
   }
 
   return (
-    <div className="flex flex-col flex-1">
-      <div className="flex items-center justify-between w-full border-b border-gray-200 py-4 px-6">
+    <div className="flex flex-1 flex-col">
+      <div className="flex w-full items-center justify-between border-b border-gray-200 py-4 px-6">
         <div className="flex-1 basis-0">
           <button
             className="flex items-center gap-x-2"
@@ -33,7 +33,7 @@ const CountryMenu = () => {
         <div>
           <h1 className="text-large-regular">Shipping To</h1>
         </div>
-        <div className="flex-1 basis-0 flex justify-end">
+        <div className="flex flex-1 basis-0 justify-end">
           <button onClick={close}>
             <X size={20} />
           </button>
@@ -45,7 +45,7 @@ const CountryMenu = () => {
           {countryOptions?.map((option) => (
             <li key={option.country}>
               <button
-                className="px-8 py-4 flex items-center justify-between w-full border-b border-gray-200"
+                className="flex w-full items-center justify-between border-b border-gray-200 px-8 py-4"
                 onClick={() =>
                   handleSelectCountry(option.region, option.country)
                 }

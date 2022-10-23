@@ -1,6 +1,6 @@
 import { medusaClient } from "@lib/config"
 import { IS_BROWSER } from "@lib/constants"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import Layout from "@modules/layout/templates"
 import OrderDetailsTemplate from "@modules/order/templates/order-details-template"
 import SkeletonOrderConfirmed from "@modules/skeletons/templates/skeleton-order-confirmed"
@@ -43,8 +43,8 @@ const Confirmed: NextPageWithLayout = () => {
   if (isSuccess) {
     return (
       <>
-        <Head
-          title={`Order #${data.display_id}`}
+        <Meta
+          name={`Order #${data.display_id}`}
           description="View your order"
         />
 

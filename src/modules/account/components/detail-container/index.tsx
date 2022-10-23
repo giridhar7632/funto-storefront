@@ -14,7 +14,7 @@ const Detail: React.FC<DetailProps> & {
   return (
     <div>
       <h2 className="text-large-semi mb-2">{title}</h2>
-      <div className="flex flex-col gap-y-4 text-small-regular">{children}</div>
+      <div className="text-small-regular flex flex-col gap-y-4">{children}</div>
     </div>
   )
 }

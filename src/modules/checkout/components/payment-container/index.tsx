@@ -52,11 +52,11 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
           <h3 className="text-base-semi leading-none text-gray-900">
             {PaymentInfoMap[paymentSession.provider_id].title}
           </h3>
-          <span className="text-gray-700 text-small-regular mt-2">
+          <span className="text-small-regular mt-2 text-gray-700">
             {PaymentInfoMap[paymentSession.provider_id].description}
           </span>
           {selected && (
-            <div className="w-full mt-4">
+            <div className="mt-4 w-full">
               <PaymentElement paymentSession={paymentSession} />
             </div>
           )}

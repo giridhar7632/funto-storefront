@@ -37,13 +37,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div>
-        <div className="relative z-0 w-full text-base-regular">
+        <div className="text-base-regular relative z-0 w-full">
           <input
             type={inputType}
             name={name}
             placeholder=" "
             className={clsx(
-              "pt-4 pb-1 block w-full px-4 mt-0 bg-transparent border appearance-none focus:outline-none focus:ring-0 focus:border-gray-400 border-gray-200",
+              "mt-0 block w-full appearance-none border border-gray-200 bg-transparent px-4 pt-4 pb-1 focus:border-gray-400 focus:outline-none focus:ring-0",
               {
                 "border-rose-500 focus:border-rose-500": hasError,
               }
@@ -55,7 +55,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             htmlFor={name}
             onClick={() => inputRef.current?.focus()}
             className={clsx(
-              "mx-3 px-1 transition-all absolute duration-300 top-3 -z-1 origin-0 text-gray-500",
+              "-z-1 origin-0 absolute top-3 mx-3 px-1 text-gray-500 transition-all duration-300",
               {
                 "!text-rose-500": hasError,
               }
@@ -68,7 +68,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="text-gray-400 px-4 focus:outline-none transition-all duration-150 outline-none focus:text-gray-700 absolute right-0 top-3"
+              className="absolute right-0 top-3 px-4 text-gray-400 outline-none transition-all duration-150 focus:text-gray-700 focus:outline-none"
             >
               {showPassword ? <Eye /> : <EyeOff />}
             </button>
@@ -80,7 +80,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             name={name}
             render={({ message }) => {
               return (
-                <div className="pt-1 pl-2 text-rose-500 text-xsmall-regular">
+                <div className="text-xsmall-regular pt-1 pl-2 text-rose-500">
                   <span>{message}</span>
                 </div>
               )

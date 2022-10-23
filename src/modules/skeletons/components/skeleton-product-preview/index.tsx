@@ -3,9 +3,9 @@ const SkeletonProductPreview = () => {
     <div className="animate-pulse">
       <div className="aspect-[29/34] w-full bg-gray-100"></div>
       <div className="text-base-regular mt-2">
-        <div className="w-3/5 h-6 bg-gray-100"></div>
+        <div className="h-6 w-3/5 bg-gray-100"></div>
 
-        <div className="w-2/5 h-6 bg-gray-100 mt-2"></div>
+        <div className="mt-2 h-6 w-2/5 bg-gray-100"></div>
       </div>
     </div>
   )

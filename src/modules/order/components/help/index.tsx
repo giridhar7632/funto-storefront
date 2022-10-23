@@ -6,7 +6,7 @@ const Help = () => {
     <div>
       <h2 className="text-base-semi">Need help?</h2>
       <div className="text-base-regular my-2">
-        <ul className="gap-y-2 flex flex-col">
+        <ul className="flex flex-col gap-y-2">
           <li>
             <Link href="/contact">
               <a>Contact</a>

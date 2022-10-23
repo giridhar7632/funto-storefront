@@ -16,7 +16,7 @@ const Addresses = () => {
   return (
     <div className="bg-white">
       <div className="text-xl-semi flex items-center gap-x-4 px-8 pb-6 pt-8">
-        <div className="bg-gray-900 w-8 h-8 rounded-full text-white flex justify-center items-center text-sm">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm text-white">
           1
         </div>
         <h2>Shipping address</h2>
@@ -34,7 +34,7 @@ const Addresses = () => {
           {!checked && (
             <div>
               <div className="text-xl-semi flex items-center gap-x-4 pb-6 pt-8">
-                <div className="bg-gray-900 w-8 h-8 rounded-full text-white flex justify-center items-center font-mono text-sm">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 font-mono text-sm text-white">
                   2
                 </div>
                 <h2>Billing address</h2>
@@ -43,7 +43,7 @@ const Addresses = () => {
             </div>
           )}
           <Button
-            className="max-w-[200px] mt-6"
+            className="mt-6 max-w-[200px]"
             onClick={handleSubmit(setAddresses)}
           >
             Continue to delivery
@@ -51,13 +51,13 @@ const Addresses = () => {
         </div>
       ) : (
         <div>
-          <div className="bg-gray-50 px-8 py-6 text-small-regular">
+          <div className="text-small-regular bg-gray-50 px-8 py-6">
             {cart && cart.shipping_address ? (
               <div className="flex items-start gap-x-8">
-                <div className="bg-green-400 rounded-full min-w-[24px] h-6 flex items-center justify-center text-white text-small-regular">
+                <div className="text-small-regular flex h-6 min-w-[24px] items-center justify-center rounded-full bg-green-400 text-white">
                   ✓
                 </div>
-                <div className="flex items-start justify-between w-full">
+                <div className="flex w-full items-start justify-between">
                   <div className="flex flex-col">
                     <span>
                       {cart.shipping_address.first_name}{" "}
@@ -79,8 +79,8 @@ const Addresses = () => {
                       <span>{cart.email}</span>
                     </div>
                     {checked && (
-                      <div className="flex items-center gap-x-2 mt-6">
-                        <div className="flex items-center justify-center border border-gray-700 bg-gray-100 w-4 h-4">
+                      <div className="mt-6 flex items-center gap-x-2">
+                        <div className="flex h-4 w-4 items-center justify-center border border-gray-700 bg-gray-100">
                           ✓
                         </div>
                         <span>Same as billing address</span>
@@ -101,18 +101,18 @@ const Addresses = () => {
           {!checked && (
             <div>
               <div className="text-xl-semi flex items-center gap-x-4 px-8 pb-6 pt-8">
-                <div className="bg-gray-900 w-8 h-8 rounded-full text-white flex justify-center items-center font-mono text-sm">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 font-mono text-sm text-white">
                   2
                 </div>
                 <h2>Billing address</h2>
               </div>
-              <div className="bg-gray-50 px-8 py-6 text-small-regular">
+              <div className="text-small-regular bg-gray-50 px-8 py-6">
                 {cart && cart.billing_address ? (
                   <div className="flex items-start gap-x-8">
-                    <div className="bg-green-400 rounded-full min-w-[24px] h-6 flex items-center justify-center text-white text-small-regular">
+                    <div className="text-small-regular flex h-6 min-w-[24px] items-center justify-center rounded-full bg-green-400 text-white">
                       ✓
                     </div>
-                    <div className="flex items-start justify-between w-full">
+                    <div className="flex w-full items-start justify-between">
                       <div className="flex flex-col">
                         <span>
                           {cart.billing_address.first_name}{" "}

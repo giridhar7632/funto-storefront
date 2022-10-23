@@ -54,16 +54,16 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
 
   return (
     <div className="product-page-constraint">
-      <div className="flex flex-col items-center text-center mb-16">
-        <span className="text-base-regular text-gray-600 mb-6">
+      <div className="mb-16 flex flex-col items-center text-center">
+        <span className="text-base-regular mb-6 text-gray-600">
           Related products
         </span>
-        <p className="text-2xl-regular text-gray-900 max-w-lg">
+        <p className="text-2xl-regular max-w-lg text-gray-900">
           You might also want to check out these products.
         </p>
       </div>
 
-      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-4 gap-y-8">
+      <ul className="grid grid-cols-2 gap-x-4 gap-y-8 small:grid-cols-3 medium:grid-cols-4">
         {previews.map((p) => (
           <li key={p.id}>
             <ProductPreview {...p} />
@@ -84,7 +84,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
           ))}
       </ul>
       {hasNextPage && (
-        <div className="flex items-center justify-center mt-8">
+        <div className="mt-8 flex items-center justify-center">
           <Button
             isLoading={isLoading}
             onClick={() => fetchNextPage()}

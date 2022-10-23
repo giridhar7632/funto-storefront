@@ -38,13 +38,13 @@ const Login = () => {
   })
 
   return (
-    <div className="max-w-sm w-full flex flex-col items-center">
-      <h1 className="text-large-semi uppercase mb-6">Welcome back</h1>
-      <p className="text-center text-base-regular text-gray-700 mb-8">
+    <div className="flex w-full max-w-sm flex-col items-center">
+      <h1 className="text-large-semi mb-6 uppercase">Welcome back</h1>
+      <p className="text-base-regular mb-8 text-center text-gray-700">
         Sign in to access an enhanced shopping experience.
       </p>
       <form className="w-full" onSubmit={onSubmit}>
-        <div className="flex flex-col w-full gap-y-2">
+        <div className="flex w-full flex-col gap-y-2">
           <Input
             label="Email"
             {...register("email", { required: "Email is required" })}
@@ -61,14 +61,14 @@ const Login = () => {
         </div>
         {authError && (
           <div>
-            <span className="text-rose-500 w-full text-small-regular">
+            <span className="text-small-regular w-full text-rose-500">
               These credentials do not match our records
             </span>
           </div>
         )}
         <Button className="mt-6">Enter</Button>
       </form>
-      <span className="text-center text-gray-700 text-small-regular mt-6">
+      <span className="text-small-regular mt-6 text-center text-gray-700">
         Not a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}

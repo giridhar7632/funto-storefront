@@ -1,10 +1,10 @@
 import CheckoutTemplate from "@modules/checkout/templates"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 
 const Checkout = () => {
   return (
     <>
-      <Head title="Checkout" />
+      <Meta name="Checkout" />
       <CheckoutTemplate />
     </>
   )

@@ -1,7 +1,7 @@
 import { medusaClient } from "@lib/config"
 import { IS_BROWSER } from "@lib/constants"
 import { getProductHandles } from "@lib/util/get-product-handles"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import Layout from "@modules/layout/templates"
 import ProductTemplate from "@modules/products/templates"
 import SkeletonProductPage from "@modules/skeletons/templates/skeleton-product-page"
@@ -54,10 +54,10 @@ const ProductPage: NextPageWithLayout<PrefetchedPageProps> = ({ notFound }) => {
   if (isSuccess) {
     return (
       <>
-        <Head
-          description={data.description}
-          title={data.title}
-          image={data.thumbnail}
+        <Meta
+          description={data.description || undefined}
+          name={data.title}
+          image={data.thumbnail || undefined}
         />
         <ProductTemplate product={data} />
       </>

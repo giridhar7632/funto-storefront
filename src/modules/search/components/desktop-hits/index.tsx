@@ -18,7 +18,7 @@ const DesktopHits = ({
   return (
     <div
       className={clsx(
-        "transition-[max-height,opacity] duration-300 ease-in-out overflow-hidden",
+        "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
         className,
         {
           "max-h-[1000px] opacity-100": !!hits.length,

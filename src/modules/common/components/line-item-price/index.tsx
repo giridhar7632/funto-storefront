@@ -20,7 +20,7 @@ const LineItemPrice = ({
   const hasReducedPrice = variant.calculated_price < variant.original_price
 
   return (
-    <div className="flex flex-col text-gray-700 text-right">
+    <div className="flex flex-col text-right text-gray-700">
       <span
         className={clsx("text-base-regular", {
           "text-rose-600": hasReducedPrice,

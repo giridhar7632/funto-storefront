@@ -12,12 +12,12 @@ const CheckoutSummary = () => {
   }
 
   return (
-    <div className="sticky top-0 flex flex-col-reverse small:flex-col gap-y-8">
-      <div className="w-full bg-white p-6 flex flex-col gap-y-6">
+    <div className="sticky top-0 flex flex-col-reverse gap-y-8 small:flex-col">
+      <div className="flex w-full flex-col gap-y-6 bg-white p-6">
         <CartTotals cart={cart} />
         <PaymentButton paymentSession={cart?.payment_session} />
       </div>
-      <div className="p-6 bg-white">
+      <div className="bg-white p-6">
         <DiscountCode cart={cart} />
       </div>
       <GiftCard cart={cart} />

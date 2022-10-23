@@ -52,13 +52,13 @@ const ControlledSearchBox = ({
             type="search"
             value={value}
             onChange={onChange}
-            className="text-base-regular placeholder:transition-colors placeholder:text-gray-500 focus:placeholder:text-gray-900 focus:outline-none flex-1 bg-transparent"
+            className="text-base-regular flex-1 bg-transparent placeholder:text-gray-500 placeholder:transition-colors focus:outline-none focus:placeholder:text-gray-900"
           />
           {value && (
             <button
               onClick={handleReset}
               type="button"
-              className="h-5 w-5 rounded-full flex items-center justify-center text-gray-900 bg-gray-200"
+              className="flex h-5 w-5 items-center justify-center rounded-full bg-gray-200 text-gray-900"
             >
               <X size={12} />
             </button>

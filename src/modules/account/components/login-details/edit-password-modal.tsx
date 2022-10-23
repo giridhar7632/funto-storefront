@@ -113,12 +113,12 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
             />
           </div>
           {error && (
-            <div className="text-rose-500 text-small-regular py-2">{error}</div>
+            <div className="text-small-regular py-2 text-rose-500">{error}</div>
           )}
         </Modal.Body>
         <Modal.Footer>
           <Button
-            className="!bg-gray-200 !text-gray-900 !border-gray-200 min-h-0"
+            className="min-h-0 !border-gray-200 !bg-gray-200 !text-gray-900"
             onClick={close}
           >
             Cancel

@@ -70,7 +70,7 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
       <Modal isOpen={state} close={close}>
         <Modal.Title>Edit your email</Modal.Title>
         <Modal.Body>
-          <div className="flex flex-col w-full">
+          <div className="flex w-full flex-col">
             <Input
               label="Email"
               {...register("email", {
@@ -84,12 +84,12 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
             />
           </div>
           {error && (
-            <div className="text-rose-500 text-small-regular py-2">{error}</div>
+            <div className="text-small-regular py-2 text-rose-500">{error}</div>
           )}
         </Modal.Body>
         <Modal.Footer>
           <Button
-            className="!bg-gray-200 !text-gray-900 !border-gray-200 min-h-0"
+            className="min-h-0 !border-gray-200 !bg-gray-200 !text-gray-900"
             onClick={close}
           >
             Cancel

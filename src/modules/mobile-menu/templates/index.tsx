@@ -11,7 +11,7 @@ const MobileMenu = () => {
 
   return (
     <Container>
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-1 flex-col">
         {(() => {
           switch (currentScreen) {
             case "country":

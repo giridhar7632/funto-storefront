@@ -48,7 +48,7 @@ const Item = ({ item, region }: ItemProps) => {
               })}
           </NativeSelect>
         </div>
-        <div className="flex items-end justify-between text-small-regular flex-1">
+        <div className="text-small-regular flex flex-1 items-end justify-between">
           <div>
             <button
               className="flex items-center gap-x-1 text-gray-500"

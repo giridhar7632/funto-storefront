@@ -1,4 +1,4 @@
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import Layout from "@modules/layout/templates"
@@ -8,10 +8,7 @@ import { NextPageWithLayout } from "types/global"
 const Home: NextPageWithLayout = () => {
   return (
     <>
-      <Head
-        title="Home"
-        description="Shop all available models only at the ACME. Worldwide Shipping. Secure Payment."
-      />
+      <Meta name="Home" />
       <Hero />
       <FeaturedProducts />
     </>

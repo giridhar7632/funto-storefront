@@ -1,11 +1,13 @@
 {
-  "name": "medusa-next",
+  "name": "funto",
   "version": "1.0.3",
   "private": true,
-  "author": "Kasper Fabricius Kristensen <kasper@medusajs.com> (https://www.medusajs.com)",
-  "description": "Next.js starter to be used with Medusa server",
+  "author": "Giridhar Talla <giridhar.talla5139@gmail.com>",
+  "description": "Elegant simple Furnitures Store.",
   "keywords": [
-    "medusa-storefront"
+    "medusa-storefront",
+    "ecommerce",
+    "furnitures"
   ],
   "scripts": {
     "dev": "next dev -p 8000",
@@ -13,7 +15,8 @@
     "start": "next start -p 8000",
     "lint": "next lint",
     "cypress": "cypress open",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "format": "prettier **/*.{ts,tsx} --write"
   },
   "resolutions": {
     "webpack": "^5",
@@ -53,6 +56,8 @@
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "postcss": "^8.4.8",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.0.23",
     "typescript": "4.6.2"
   }

@@ -19,7 +19,7 @@ export type HitProps = {
 
 const Hit = ({ hit }: HitProps) => {
   return (
-    <div key={hit.id} className="grid grid-cols-[86px_1fr] gap-4 w-full">
+    <div key={hit.id} className="grid w-full grid-cols-[86px_1fr] gap-4">
       <Thumbnail thumbnail={hit.thumbnail} size="full" />
       <div className="flex flex-col justify-between">
         <div className="flex flex-col">

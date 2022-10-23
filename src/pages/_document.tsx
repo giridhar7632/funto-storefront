@@ -9,14 +9,14 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="preconnect" href={`//${hostname}`} crossOrigin="true" />
           <link rel="dns-prefetch" href={`//${hostname}`} />
+          <link rel="preconnect" href={`//${hostname}`} crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+            href="https://api.fontshare.com/v2/css?f[]=montserrat@500,400&f[]=clash-display@400,700,500,600,1&f[]=archivo@300,500,400,600&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body style={{ backgroundColor: "#DAD3C8", color: "#262525" }}>
           <Main />
           <NextScript />
         </body>

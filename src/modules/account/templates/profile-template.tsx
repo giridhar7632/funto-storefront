@@ -22,7 +22,7 @@ const ProfileTemplate = () => {
           your password.
         </p>
       </div>
-      <div className="flex flex-col gap-y-8 w-full">
+      <div className="flex w-full flex-col gap-y-8">
         <ProfileName customer={customer} />
         <Divider />
         <ProfileEmail customer={customer} />
@@ -38,7 +38,7 @@ const ProfileTemplate = () => {
 }
 
 const Divider = () => {
-  return <div className="w-full h-px bg-gray-200" />
+  return <div className="h-px w-full bg-gray-200" />
 }
 
 export default ProfileTemplate

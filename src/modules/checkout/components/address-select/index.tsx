@@ -56,7 +56,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
   return (
     <Listbox onChange={handleSelect} value={selected}>
       <div className="relative">
-        <Listbox.Button className="relative w-full flex justify-between items-center px-4 py-[10px] text-left bg-white cursor-default focus:outline-none border border-gray-200 focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-gray-300 focus-visible:ring-offset-2 focus-visible:border-gray-300 text-base-regular">
+        <Listbox.Button className="text-base-regular relative flex w-full cursor-default items-center justify-between border border-gray-200 bg-white px-4 py-[10px] text-left focus:outline-none focus-visible:border-gray-300 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-300">
           {({ open }) => (
             <>
               <span className="block truncate">
@@ -66,7 +66,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
               </span>
               <ChevronDown
                 size={16}
-                className={clsx({ "transform rotate-180": open })}
+                className={clsx({ "rotate-180 transform": open })}
               />
             </>
           )}
@@ -77,18 +77,18 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute z-20 w-full overflow-auto text-small-regular bg-white border border-gray-200 border-top-0 max-h-60 focus:outline-none sm:text-sm">
+          <Listbox.Options className="text-small-regular border-top-0 absolute z-20 max-h-60 w-full overflow-auto border border-gray-200 bg-white focus:outline-none sm:text-sm">
             {addresses.map((address) => {
               return (
                 <Listbox.Option
                   key={address.id}
                   value={address.id}
-                  className="cursor-default select-none relative pl-6 pr-10 hover:bg-gray-50 py-4"
+                  className="relative cursor-default select-none py-4 pl-6 pr-10 hover:bg-gray-50"
                 >
-                  <div className="flex gap-x-4 items-start">
+                  <div className="flex items-start gap-x-4">
                     <Radio checked={selected === address.id} />
                     <div className="flex flex-col">
-                      <span className="text-left text-base-semi">
+                      <span className="text-base-semi text-left">
                         {address.first_name} {address.last_name}
                       </span>
                       {address.company && (
@@ -96,7 +96,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
                           {address.company}
                         </span>
                       )}
-                      <div className="flex flex-col text-left text-base-regular mt-2">
+                      <div className="text-base-regular mt-2 flex flex-col text-left">
                         <span>
                           {address.address_1}
                           {address.address_2 && (

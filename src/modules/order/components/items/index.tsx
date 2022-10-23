@@ -17,7 +17,7 @@ const Items = ({ items, region, cartId }: ItemsProps) => {
   const enrichedItems = useEnrichedLineItems(items, cartId)
 
   return (
-    <div className="p-10 border-b border-gray-200 gap-y-4 flex flex-col">
+    <div className="flex flex-col gap-y-4 border-b border-gray-200 p-10">
       {enrichedItems?.length
         ? enrichedItems.map((item) => {
             return (
@@ -25,11 +25,11 @@ const Items = ({ items, region, cartId }: ItemsProps) => {
                 <div className="w-[122px]">
                   <Thumbnail thumbnail={item.thumbnail} size="full" />
                 </div>
-                <div className="flex flex-col justify-between flex-1">
-                  <div className="flex flex-col flex-1 text-small-regular">
+                <div className="flex flex-1 flex-col justify-between">
+                  <div className="text-small-regular flex flex-1 flex-col">
                     <div className="flex items-start justify-between">
                       <div>
-                        <h3 className="text-base-regular overflow-ellipsis overflow-hidden whitespace-nowrap mr-4">
+                        <h3 className="text-base-regular mr-4 overflow-hidden overflow-ellipsis whitespace-nowrap">
                           <Link
                             href={`/products/${item.variant.product.handle}`}
                           >

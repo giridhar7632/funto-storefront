@@ -1,6 +1,6 @@
 import AccountLayout from "@modules/account/templates/account-layout"
 import AddressesTemplate from "@modules/account/templates/addresses-template"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import Layout from "@modules/layout/templates"
 import { ReactElement } from "react"
 import { NextPageWithLayout } from "types/global"
@@ -8,7 +8,7 @@ import { NextPageWithLayout } from "types/global"
 const Addresses: NextPageWithLayout = () => {
   return (
     <>
-      <Head title="Addresses" description="View your addresses" />
+      <Meta name="Addresses" description="View your addresses" />
       <AddressesTemplate />
     </>
   )

@@ -1,12 +1,12 @@
 import LoginTemplate from "@modules/account/templates/login-template"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import Layout from "@modules/layout/templates"
 import { NextPageWithLayout } from "types/global"
 
 const Login: NextPageWithLayout = () => {
   return (
     <>
-      <Head title="Sign in" description="Sign in to your ACME account." />
+      <Meta name="Sign in" description="Sign in to your ACME account." />
       <LoginTemplate />
     </>
   )

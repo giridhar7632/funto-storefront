@@ -16,11 +16,11 @@ const ProductPreview = ({
           <Thumbnail thumbnail={thumbnail} size="full" />
           <div className="text-base-regular mt-2">
             <span>{title}</span>
-            <div className="flex items-center gap-x-2 mt-1">
+            <div className="mt-1 flex items-center gap-x-2">
               {price ? (
                 <>
                   {price.price_type === "sale" && (
-                    <span className="line-through text-gray-500">
+                    <span className="text-gray-500 line-through">
                       {price.original_price}
                     </span>
                   )}
@@ -33,7 +33,7 @@ const ProductPreview = ({
                   </span>
                 </>
               ) : (
-                <div className="w-20 h-6 animate-pulse bg-gray-100"></div>
+                <div className="h-6 w-20 animate-pulse bg-gray-100"></div>
               )}
             </div>
           </div>

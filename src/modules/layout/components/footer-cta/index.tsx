@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const FooterCTA = () => {
   return (
-    <div className="bg-amber-100 w-full">
-      <div className="content-container flex flex-col-reverse gap-y-8 small:flex-row small:items-center justify-between py-16 relative">
+    <div className="w-full bg-amber-100">
+      <div className="content-container relative flex flex-col-reverse justify-between gap-y-8 py-16 small:flex-row small:items-center">
         <div>
           <h3 className="text-2xl-semi">Shop the latest styles</h3>
           <div className="mt-6">
@@ -12,7 +12,7 @@ const FooterCTA = () => {
           </div>
         </div>
 
-        <div className="relative w-full aspect-square small:w-[35%] small:aspect-[28/36]">
+        <div className="relative aspect-square w-full small:aspect-[28/36] small:w-[35%]">
           <Image
             src="/cta_three.jpg"
             alt=""

@@ -19,7 +19,7 @@ const CartDropdown = () => {
   const { state, open, close } = useCartDropdown()
 
   return (
-    <div className="h-full z-50" onMouseEnter={open} onMouseLeave={close}>
+    <div className="z-50 h-full" onMouseEnter={open} onMouseLeave={close}>
       <Popover className="relative h-full">
         <Link href="/cart" passHref>
           <Popover.Button className="h-full">{`My Bag (${totalItems})`}</Popover.Button>
@@ -36,14 +36,14 @@ const CartDropdown = () => {
         >
           <Popover.Panel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[382px] text-gray-900"
+            className="absolute top-[calc(100%+1px)] right-0 hidden w-[382px] border-x border-b border-gray-200 bg-white text-gray-900 small:block"
           >
-            <div className="p-4 flex items-center justify-center">
+            <div className="flex items-center justify-center p-4">
               <h3 className="text-large-semi">Shopping Bag</h3>
             </div>
             {cart && items?.length ? (
               <>
-                <div className="overflow-y-scroll max-h-[402px] px-4 grid grid-cols-1 gap-y-8 no-scrollbar">
+                <div className="no-scrollbar grid max-h-[402px] grid-cols-1 gap-y-8 overflow-y-scroll px-4">
                   {items
                     .sort((a, b) => {
                       return a.created_at > b.created_at ? -1 : 1
@@ -56,11 +56,11 @@ const CartDropdown = () => {
                         <div className="w-[122px]">
                           <Thumbnail thumbnail={item.thumbnail} size="full" />
                         </div>
-                        <div className="flex flex-col justify-between flex-1">
-                          <div className="flex flex-col flex-1">
+                        <div className="flex flex-1 flex-col justify-between">
+                          <div className="flex flex-1 flex-col">
                             <div className="flex items-start justify-between">
                               <div>
-                                <h3 className="text-base-regular overflow-ellipsis overflow-hidden whitespace-nowrap mr-4 w-[130px]">
+                                <h3 className="text-base-regular mr-4 w-[130px] overflow-hidden overflow-ellipsis whitespace-nowrap">
                                   <Link
                                     href={`/products/${item.variant.product.handle}`}
                                   >
@@ -80,7 +80,7 @@ const CartDropdown = () => {
                               </div>
                             </div>
                           </div>
-                          <div className="flex items-end justify-between text-small-regular flex-1">
+                          <div className="text-small-regular flex flex-1 items-end justify-between">
                             <div>
                               <button
                                 className="flex items-center gap-x-1 text-gray-500"
@@ -95,9 +95,9 @@ const CartDropdown = () => {
                       </div>
                     ))}
                 </div>
-                <div className="p-4 flex flex-col gap-y-4 text-small-regular">
+                <div className="text-small-regular flex flex-col gap-y-4 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-semibold">
+                    <span className="font-semibold text-gray-700">
                       Subtotal{" "}
                       <span className="font-normal">(incl. taxes)</span>
                     </span>
@@ -118,8 +118,8 @@ const CartDropdown = () => {
               </>
             ) : (
               <div>
-                <div className="flex py-16 flex-col gap-y-4 items-center justify-center">
-                  <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
+                <div className="flex flex-col items-center justify-center gap-y-4 py-16">
+                  <div className="text-small-regular flex h-6 w-6 items-center justify-center rounded-full bg-gray-900 text-white">
                     <span>0</span>
                   </div>
                   <span>Your shopping bag is empty.</span>

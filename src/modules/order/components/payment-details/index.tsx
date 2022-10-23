@@ -29,7 +29,7 @@ const PaymentDetails = ({ payments, paymentStatus }: PaymentDetailsProps) => {
 
 const PayPalDetails = () => {
   return (
-    <div className="flex flex-col text-base-regular">
+    <div className="text-base-regular flex flex-col">
       <span className="text-small-regular text-gray-700">PayPal</span>
       <span>PayPal payment</span>
     </div>
@@ -45,7 +45,7 @@ const StripeDetails = ({ payment }: { payment: Payment }) => {
   } = (payment.data.charges as any).data[0].payment_method_details.card
 
   return (
-    <div className="flex flex-col text-base-regular">
+    <div className="text-base-regular flex flex-col">
       <span className="text-small-regular text-gray-700">
         {card.brand.substring(0, 1).toUpperCase()}
         {card.brand.substring(1)}
@@ -61,7 +61,7 @@ const StripeDetails = ({ payment }: { payment: Payment }) => {
 
 const TestDetails = () => {
   return (
-    <div className="flex flex-col text-base-regular">
+    <div className="text-base-regular flex flex-col">
       <span className="text-small-regular text-gray-700">Test</span>
       <span>Test payment using medusa-payment-manual</span>
     </div>

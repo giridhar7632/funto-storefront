@@ -24,12 +24,12 @@ const StepContainer = ({
     <div>
       <div
         className={clsx("bg-white", className, {
-          "opacity-50 pointer-events-none select-none": state,
+          "pointer-events-none select-none opacity-50": state,
         })}
         {...props}
       >
         <div className="text-xl-semi flex items-center gap-x-4 px-8 pb-6 pt-8">
-          <div className="bg-gray-900 w-8 h-8 rounded-full text-white flex justify-center items-center text-sm">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm text-white">
             {index}
           </div>
           <h2>{title}</h2>
@@ -38,7 +38,7 @@ const StepContainer = ({
           <Disclosure.Panel
             static
             className={clsx(
-              "transition-[max-height,opacity] duration-700 ease-in-out overflow-hidden",
+              "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
               {
                 "max-h-[9999px] opacity-100": !state,
                 "max-h-0 opacity-0": state,
@@ -50,7 +50,7 @@ const StepContainer = ({
           <Disclosure.Panel
             static
             className={clsx(
-              "transition-[max-height,opacity] duration-700 ease-in-out overflow-hidden",
+              "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
               {
                 "max-h-[9999px] opacity-100": state,
                 "max-h-0 opacity-0": !state,

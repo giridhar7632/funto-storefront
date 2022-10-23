@@ -26,14 +26,14 @@ const DropdownMenu = () => {
       onMouseLeave={() => setOpen(false)}
       className="h-full"
     >
-      <div className="flex items-center h-full">
-        <Popover className="h-full flex">
+      <div className="flex h-full items-center">
+        <Popover className="flex h-full">
           <>
             <Link href="/shop" passHref>
               <a className="relative flex h-full">
                 <Popover.Button
                   className={clsx(
-                    "relative h-full flex items-center transition-all ease-out duration-200"
+                    "relative flex h-full items-center transition-all duration-200 ease-out"
                   )}
                   onClick={() => push("/store")}
                 >
@@ -54,12 +54,12 @@ const DropdownMenu = () => {
             >
               <Popover.Panel
                 static
-                className="absolute top-full inset-x-0 text-sm text-gray-700 z-30 border-y border-gray-200"
+                className="absolute inset-x-0 top-full z-30 border-y border-gray-200 text-sm text-gray-700"
               >
                 <div className="relative bg-white py-8">
-                  <div className="flex items-start content-container">
-                    <div className="flex flex-col flex-1 max-w-[30%]">
-                      <h3 className="text-base-semi text-gray-900 mb-4">
+                  <div className="content-container flex items-start">
+                    <div className="flex max-w-[30%] flex-1 flex-col">
+                      <h3 className="text-base-semi mb-4 text-gray-900">
                         Collections
                       </h3>
                       <div className="flex items-start">
@@ -90,7 +90,7 @@ const DropdownMenu = () => {
                           repeat(6).map((index) => (
                             <div
                               key={index}
-                              className="w-12 h-4 bg-gray-100 animate-pulse"
+                              className="h-4 w-12 animate-pulse bg-gray-100"
                             />
                           ))}
                       </div>

@@ -31,9 +31,9 @@ const PaymentStripe: React.FC = () => {
 
   return (
     <div>
-      <div className="flex flex-col relative w-full pb-6">
+      <div className="relative flex w-full flex-col pb-6">
         <CardNumber options={useOptions as StripeCardNumberElementOptions} />
-        <div className="flex items-center mt-12 relative gap-x-4">
+        <div className="relative mt-12 flex items-center gap-x-4">
           <CardExpiry options={useOptions as StripeCardExpiryElementOptions} />
           <CardCVC options={useOptions as StripeCardCvcElementOptions} />
         </div>
@@ -48,8 +48,8 @@ const CardNumber = ({
   options: StripeCardNumberElementOptions
 }) => {
   return (
-    <div className="border-b border-gray-200 py-2 relative">
-      <span className="absolute -top-6 text-gray-700 text-base-regular">
+    <div className="relative border-b border-gray-200 py-2">
+      <span className="text-base-regular absolute -top-6 text-gray-700">
         Card number
       </span>
       <CardNumberElement options={options} />
@@ -63,8 +63,8 @@ const CardExpiry = ({
   options: StripeCardExpiryElementOptions
 }) => {
   return (
-    <div className="border-b border-gray-200 w-full py-2 relative">
-      <span className="absolute -top-6 text-gray-700 text-base-regular">
+    <div className="relative w-full border-b border-gray-200 py-2">
+      <span className="text-base-regular absolute -top-6 text-gray-700">
         Expiration date
       </span>
       <CardExpiryElement options={options} />
@@ -74,8 +74,8 @@ const CardExpiry = ({
 
 const CardCVC = ({ options }: { options: StripeCardCvcElementOptions }) => {
   return (
-    <div className="border-b border-gray-200 w-full py-2 relative">
-      <span className="absolute -top-6 text-gray-700 text-base-regular">
+    <div className="relative w-full border-b border-gray-200 py-2">
+      <span className="text-base-regular absolute -top-6 text-gray-700">
         CVC
       </span>
       <CardCvcElement options={{ ...options, placeholder: "123" }} />

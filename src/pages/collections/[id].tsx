@@ -2,7 +2,7 @@ import { medusaClient } from "@lib/config"
 import { IS_BROWSER } from "@lib/constants"
 import { getCollectionIds } from "@lib/util/get-collection-ids"
 import CollectionTemplate from "@modules/collections/templates"
-import Head from "@modules/common/components/head"
+import Meta from "@modules/layout/components/meta"
 import Layout from "@modules/layout/templates"
 import SkeletonCollectionPage from "@modules/skeletons/templates/skeleton-collection-page"
 import { GetStaticPaths, GetStaticProps } from "next"
@@ -75,7 +75,7 @@ const CollectionPage: NextPageWithLayout<PrefetchedPageProps> = ({
   if (isSuccess) {
     return (
       <>
-        <Head title={data.title} description={`${data.title} collection`} />
+        <Meta name={data.title} description={`${data.title} collection`} />
         <CollectionTemplate collection={data} />
       </>
     )
