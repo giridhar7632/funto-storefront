@@ -46,7 +46,7 @@ const CartDropdown = () => {
         >
           <Popover.Panel
             static
-            className="absolute top-[calc(100%+1px)] right-0 hidden w-[382px] rounded-md border-x border-b border-textBtn bg-bgLight text-gray-900 small:block"
+            className="absolute top-[calc(100%+1px)] right-0 hidden w-[382px] rounded-md border-x border-b border-textBtn bg-bgLight text-text small:block"
           >
             <div className="flex items-center justify-center p-4">
               <h3 className="text-large-semi">Shopping Bag</h3>
@@ -60,7 +60,7 @@ const CartDropdown = () => {
                     })
                     .map((item) => (
                       <div
-                        className="grid grid-cols-[122px_1fr] gap-x-4"
+                        className="grid grid-cols-[122px_1fr] gap-x-4 rounded bg-[rgba(255,255,255,0.4)] px-2 py-3 shadow-sm"
                         key={item.id}
                       >
                         <div className="w-[122px]">
@@ -70,7 +70,7 @@ const CartDropdown = () => {
                           <div className="flex flex-1 flex-col">
                             <div className="flex items-start justify-between">
                               <div>
-                                <h3 className="text-base-regular mr-4 w-[130px] overflow-hidden overflow-ellipsis whitespace-nowrap">
+                                <h3 className="text-base-regular mr-4 w-[130px] overflow-hidden overflow-ellipsis whitespace-nowrap font-serif font-medium">
                                   <Link
                                     href={`/products/${item.variant.product.handle}`}
                                   >
@@ -93,7 +93,7 @@ const CartDropdown = () => {
                           <div className="text-small-regular flex flex-1 items-end justify-between">
                             <div>
                               <button
-                                className="flex items-center gap-x-1 text-gray-500"
+                                className="flex items-center gap-x-1 text-textLight"
                                 onClick={() => deleteItem(item.id)}
                               >
                                 <Trash size={14} />
@@ -107,11 +107,11 @@ const CartDropdown = () => {
                 </div>
                 <div className="text-small-regular flex flex-col gap-y-4 p-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-gray-700">
+                    <span className="font-semibold text-textLight">
                       Subtotal{" "}
                       <span className="font-normal">(incl. taxes)</span>
                     </span>
-                    <span className="text-large-semi">
+                    <span className="text-large-semi font-serif">
                       {formatAmount({
                         amount: cart.subtotal || 0,
                         region: cart.region,
@@ -129,7 +129,7 @@ const CartDropdown = () => {
             ) : (
               <div>
                 <div className="flex flex-col items-center justify-center gap-y-4 py-16">
-                  <div className="text-small-regular flex h-6 w-6 items-center justify-center rounded-full bg-gray-900 text-white">
+                  <div className="text-small-regular flex h-6 w-6 items-center justify-center rounded-full bg-text text-white">
                     <span>0</span>
                   </div>
                   <span>Your shopping bag is empty.</span>

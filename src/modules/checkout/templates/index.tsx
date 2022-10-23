@@ -1,5 +1,6 @@
 import { CheckoutProvider } from "@lib/context/checkout-context"
 import ChevronDown from "@modules/common/icons/chevron-down"
+import Logo from "@modules/layout/components/logo"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
 import Link from "next/link"
 import CheckoutLoader from "../components/checkout-loader"
@@ -9,11 +10,11 @@ import CheckoutSummary from "./checkout-summary"
 const CheckoutTemplate = () => {
   return (
     <CheckoutProvider>
-      <div className="relative bg-gray-100 small:min-h-screen">
-        <div className="h-16 bg-white">
+      <div className="relative bg-bgLight small:min-h-screen">
+        <div className="h-16 bg-[rgba(255,255,255,0.4)]">
           <nav className="content-container flex h-full items-center justify-between">
             <Link href="/cart">
-              <a className="text-small-semi flex flex-1 basis-0 items-center gap-x-2 uppercase text-gray-700">
+              <a className="text-small-semi flex flex-1 basis-0 items-center gap-x-2 uppercase text-textLight">
                 <ChevronDown className="rotate-90" size={16} />
                 <span className="mt-px hidden small:block">
                   Back to shopping cart
@@ -22,7 +23,9 @@ const CheckoutTemplate = () => {
               </a>
             </Link>
             <Link href="/">
-              <a className="text-xl-semi">ACME</a>
+              <a>
+                <Logo label="Funto" />
+              </a>
             </Link>
             <div className="flex-1 basis-0" />
           </nav>

@@ -55,10 +55,10 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
           onFocus={() => innerRef.current?.focus()}
           onBlur={() => innerRef.current?.blur()}
           className={clsx(
-            "text-base-regular relative flex items-center border border-gray-200",
+            "text-base-regular relative flex items-center rounded border border-textBtn",
             className,
             {
-              "text-gray-500": isPlaceholder,
+              "text-textLight": isPlaceholder,
             }
           )}
         >

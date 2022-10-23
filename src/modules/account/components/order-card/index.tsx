@@ -21,13 +21,13 @@ const OrderCard = ({ order }: OrderCardProps) => {
   }, [order])
 
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-[rgba(255,255,255,0.4)]">
       <div className="text-large-semi mb-1 uppercase">#{order.display_id}</div>
-      <div className="text-small-regular flex items-center divide-x divide-gray-200 text-gray-700">
+      <div className="text-small-regular flex items-center divide-x divide-gray-200 text-textLight">
         <span className="pr-2">
           {new Date(order.created_at).toDateString()}
         </span>
-        <span className="px-2">
+        <span className="px-2 font-serif">
           {formatAmount({
             amount: order.total,
             region: order.region,
@@ -47,8 +47,8 @@ const OrderCard = ({ order }: OrderCardProps) => {
                 images={[]}
                 size="full"
               />
-              <div className="text-small-regular flex items-center text-gray-700">
-                <span className="font-semibold text-gray-900">{i.title}</span>
+              <div className="text-small-regular flex items-center text-textLight">
+                <span className="font-semibold text-text">{i.title}</span>
                 <span className="ml-2">x</span>
                 <span>{i.quantity}</span>
               </div>
@@ -57,10 +57,10 @@ const OrderCard = ({ order }: OrderCardProps) => {
         })}
         {numberOfProducts > 4 && (
           <div className="flex h-full w-full flex-col items-center justify-center">
-            <span className="text-small-regular text-gray-700">
+            <span className="text-small-regular text-textLight">
               + {numberOfLines - 4}
             </span>
-            <span className="text-small-regular text-gray-700">more</span>
+            <span className="text-small-regular text-textLight">more</span>
           </div>
         )}
       </div>

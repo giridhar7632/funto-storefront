@@ -89,7 +89,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   }
 
   return (
-    <div className="flex w-full flex-col bg-white">
+    <div className="flex w-full flex-col">
       <div className="mb-4">
         <h3 className="text-base-semi">Discount</h3>
       </div>
@@ -126,6 +126,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   className="h-[46px] !min-h-[0] w-[80px]"
                   disabled={isLoading}
                   isLoading={isLoading}
+                  variant={"secondary"}
                 >
                   Apply
                 </Button>

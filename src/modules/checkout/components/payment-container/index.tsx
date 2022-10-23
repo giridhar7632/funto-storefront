@@ -38,7 +38,7 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
       className={clsx(
         "flex flex-col gap-y-4 border-b border-gray-200 last:border-b-0",
         {
-          "bg-gray-50": selected,
+          "bg-bgLight": selected,
         }
       )}
     >
@@ -49,10 +49,10 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
       >
         <Radio checked={selected} />
         <div className="flex flex-col text-left">
-          <h3 className="text-base-semi leading-none text-gray-900">
+          <h3 className="text-base-semi leading-none text-text">
             {PaymentInfoMap[paymentSession.provider_id].title}
           </h3>
-          <span className="text-small-regular mt-2 text-gray-700">
+          <span className="text-small-regular mt-2 text-textLight">
             {PaymentInfoMap[paymentSession.provider_id].description}
           </span>
           {selected && (

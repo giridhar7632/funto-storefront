@@ -16,12 +16,12 @@ const OrderDetails = ({ order, showStatus }: OrderDetailsProps) => {
 
   return (
     <div className="border.gray-200 border-b p-10">
-      <span className="text-small-regular uppercase text-gray-700">
+      <span className="text-small-regular uppercase text-textLight">
         Thank you, your order was successfully placed
       </span>
       <h1 className="text-2xl-semi mt-2 uppercase">#{order.display_id}</h1>
       <span>{order.id.split("order_")[1]}</span>
-      <div className="text-small-regular mt-4 flex items-center gap-x-4 text-gray-700">
+      <div className="text-small-regular mt-4 flex items-center gap-x-4 text-textLight">
         <span>{new Date(order.created_at).toDateString()}</span>
         <span>{`${items} ${items !== 1 ? "items" : "item"}`}</span>
         {showStatus && (

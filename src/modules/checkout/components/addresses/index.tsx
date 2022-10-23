@@ -14,9 +14,9 @@ const Addresses = () => {
     cart,
   } = useCheckout()
   return (
-    <div className="bg-white">
+    <div className="rounded-md bg-[rgba(255,255,255,0.4)]">
       <div className="text-xl-semi flex items-center gap-x-4 px-8 pb-6 pt-8">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 text-sm text-white">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-text text-sm text-white">
           1
         </div>
         <h2>Shipping address</h2>
@@ -34,7 +34,7 @@ const Addresses = () => {
           {!checked && (
             <div>
               <div className="text-xl-semi flex items-center gap-x-4 pb-6 pt-8">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 font-mono text-sm text-white">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-text font-mono text-sm text-white">
                   2
                 </div>
                 <h2>Billing address</h2>
@@ -43,7 +43,7 @@ const Addresses = () => {
             </div>
           )}
           <Button
-            className="mt-6 max-w-[200px]"
+            className="mt-6 max-w-[250px]"
             onClick={handleSubmit(setAddresses)}
           >
             Continue to delivery
@@ -51,7 +51,7 @@ const Addresses = () => {
         </div>
       ) : (
         <div>
-          <div className="text-small-regular bg-gray-50 px-8 py-6">
+          <div className="text-small-regular bg-bgLight px-8 py-6">
             {cart && cart.shipping_address ? (
               <div className="flex items-start gap-x-8">
                 <div className="text-small-regular flex h-6 min-w-[24px] items-center justify-center rounded-full bg-green-400 text-white">
@@ -101,12 +101,12 @@ const Addresses = () => {
           {!checked && (
             <div>
               <div className="text-xl-semi flex items-center gap-x-4 px-8 pb-6 pt-8">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-900 font-mono text-sm text-white">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-text font-mono text-sm text-white">
                   2
                 </div>
                 <h2>Billing address</h2>
               </div>
-              <div className="text-small-regular bg-gray-50 px-8 py-6">
+              <div className="text-small-regular bg-bgLight px-8 py-6">
                 {cart && cart.billing_address ? (
                   <div className="flex items-start gap-x-8">
                     <div className="text-small-regular flex h-6 min-w-[24px] items-center justify-center rounded-full bg-green-400 text-white">

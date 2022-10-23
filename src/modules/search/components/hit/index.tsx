@@ -25,13 +25,13 @@ const Hit = ({ hit }: HitProps) => {
         <div className="flex flex-col">
           {hit.collection_id && (
             <Link href={`/collections/${hit.collection_id}`}>
-              <a className="text-small-regular text-gray-500">
+              <a className="text-small-regular text-textLight">
                 {hit.collection_handle}
               </a>
             </Link>
           )}
           <span className="text-base-regular">{hit.title}</span>
-          <span className="text-small-regular text-gray-700">
+          <span className="text-small-regular text-textLight">
             {hit.description}
           </span>
         </div>

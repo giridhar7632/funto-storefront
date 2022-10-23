@@ -56,9 +56,9 @@ const Nav = () => {
       >
         <nav
           className={clsx(
-            "text-regular flex h-full w-full items-center justify-between text-gray-900 transition-colors duration-200",
+            "text-regular flex h-full w-full items-center justify-between transition-colors duration-200",
             {
-              "text-white group-hover:text-gray-900": isHome && !isScrolled,
+              "text-white group-hover:text-text": isHome && !isScrolled,
             }
           )}
         >

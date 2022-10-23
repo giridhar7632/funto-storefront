@@ -26,37 +26,45 @@ const CartTotals: React.FC<CartTotalsProps> = ({ cart }) => {
 
   return (
     <div>
-      <div className="text-small-regular text-gray-700">
-        <div className="text-base-regular mb-2 flex items-center justify-between text-gray-900">
+      <div className="text-small-regular text-textLight">
+        <div className="text-base-regular mb-2 flex items-center justify-between text-text">
           <span>Subtotal</span>
-          <span>{getAmount(subtotal)}</span>
+          <span className="font-serif font-medium">{getAmount(subtotal)}</span>
         </div>
         <div className="flex flex-col gap-y-1">
           {!!discount_total && (
             <div className="flex items-center justify-between">
               <span>Discount</span>
-              <span>- {getAmount(discount_total)}</span>
+              <span className="font-serif font-medium">
+                - {getAmount(discount_total)}
+              </span>
             </div>
           )}
           {!!gift_card_total && (
             <div className="flex items-center justify-between">
               <span>Gift card</span>
-              <span>- {getAmount(gift_card_total)}</span>
+              <span className="font-serif font-medium">
+                - {getAmount(gift_card_total)}
+              </span>
             </div>
           )}
           <div className="flex items-center justify-between">
             <span>Shipping</span>
-            <span>{getAmount(shipping_total)}</span>
+            <span className="font-serif font-medium">
+              {getAmount(shipping_total)}
+            </span>
           </div>
           <div className="flex items-center justify-between">
             <span>Taxes</span>
-            <span>{getAmount(tax_total)}</span>
+            <span className="font-serif font-medium">
+              {getAmount(tax_total)}
+            </span>
           </div>
         </div>
         <div className="my-4 h-px w-full border-b border-dashed border-gray-200" />
-        <div className="text-base-regular mb-2 flex items-center justify-between text-gray-900">
+        <div className="text-base-regular mb-2 flex items-center justify-between text-text">
           <span>Total</span>
-          <span>{getAmount(total)}</span>
+          <span className="font-serif font-medium">{getAmount(total)}</span>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const DesktopSearchModal = () => {
             searchClient={searchClient}
           >
             <div className="flex h-full flex-col">
-              <div className="flex w-full items-center gap-x-2 bg-gray-50 p-4">
+              <div className="flex w-full items-center gap-x-2 bg-bgLight p-4">
                 <Search />
                 <SearchBox />
               </div>

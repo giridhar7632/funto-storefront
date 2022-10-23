@@ -42,10 +42,10 @@ const Register = () => {
   })
 
   return (
-    <div className="mt-12 flex max-w-sm flex-col items-center">
-      <h1 className="text-large-semi mb-6 uppercase">Become a Acme Member</h1>
-      <p className="text-base-regular mb-4 text-center text-gray-700">
-        Create your Acme Member profile, and get access to an enhanced shopping
+    <div className="mt-10 flex max-w-sm flex-col items-center">
+      <h1 className="text-2xl-semi mb-2 font-serif">Become a Funto Member</h1>
+      <p className="text-base-regular mb-4 text-center text-textLight">
+        Create your Funto Member profile, and get access to an enhanced shopping
         experience.
       </p>
       <form className="flex w-full flex-col" onSubmit={onSubmit}>
@@ -91,8 +91,8 @@ const Register = () => {
             </span>
           </div>
         )}
-        <span className="text-small-regular mt-6 text-center text-gray-700">
-          By creating an account, you agree to Acme&apos;s{" "}
+        <span className="text-small-regular mt-6 text-center text-textLight">
+          By creating an account, you agree to Funto&apos;s{" "}
           <Link href="/content/privacy-policy">
             <a className="underline">Privacy Policy</a>
           </Link>{" "}
@@ -104,7 +104,7 @@ const Register = () => {
         </span>
         <Button className="mt-6">Join</Button>
       </form>
-      <span className="text-small-regular mt-6 text-center text-gray-700">
+      <span className="text-md-regular mt-6 text-center text-textLight">
         Already a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}

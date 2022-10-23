@@ -23,7 +23,7 @@ const Collapsible: React.FC<{ label: string }> = ({ label, children }) => {
         {({ open }) => {
           return (
             <>
-              <Disclosure.Button className="flex w-full items-center justify-between text-gray-900">
+              <Disclosure.Button className="flex w-full items-center justify-between text-text">
                 <span className="text-small-semi uppercase">{label}</span>
                 <AnimatedButton open={open} />
               </Disclosure.Button>
@@ -52,10 +52,10 @@ const Collapsible: React.FC<{ label: string }> = ({ label, children }) => {
 const AnimatedButton = ({ open }: { open: boolean }) => {
   return (
     <div className="relative h-[15px] w-[15px] cursor-pointer">
-      <div className="absolute inset-x-0 top-[7px] h-px bg-gray-900" />
+      <div className="absolute inset-x-0 top-[7px] h-px bg-text" />
       <div
         className={clsx(
-          "absolute inset-y-0 left-[7px] w-px bg-gray-900 transition-all duration-300 ease-out",
+          "absolute inset-y-0 left-[7px] w-px bg-text transition-all duration-300 ease-out",
           { "rotate-90": open }
         )}
       />

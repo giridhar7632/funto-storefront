@@ -9,7 +9,7 @@ const OrderOverview = () => {
 
   if (isLoading) {
     return (
-      <div className="flex w-full justify-center pt-12 text-gray-900">
+      <div className="flex w-full justify-center pt-12 text-text">
         <Spinner size={36} />
       </div>
     )

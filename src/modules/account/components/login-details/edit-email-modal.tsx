@@ -89,7 +89,7 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
         </Modal.Body>
         <Modal.Footer>
           <Button
-            className="min-h-0 !border-gray-200 !bg-gray-200 !text-gray-900"
+            className="min-h-0 !border-gray-200 !bg-gray-200 !text-text"
             onClick={close}
           >
             Cancel

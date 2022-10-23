@@ -39,8 +39,10 @@ const Login = () => {
 
   return (
     <div className="flex w-full max-w-sm flex-col items-center">
-      <h1 className="text-large-semi mb-6 uppercase">Welcome back</h1>
-      <p className="text-base-regular mb-8 text-center text-gray-700">
+      <h1 className="xsmall:text-3xl-semi mb-2 font-serif 2xsmall:text-xl">
+        Welcome back
+      </h1>
+      <p className="text-base-regular mb-8 text-center text-textLight">
         Sign in to access an enhanced shopping experience.
       </p>
       <form className="w-full" onSubmit={onSubmit}>
@@ -66,9 +68,9 @@ const Login = () => {
             </span>
           </div>
         )}
-        <Button className="mt-6">Enter</Button>
+        <Button className="mt-6">Log in</Button>
       </form>
-      <span className="text-small-regular mt-6 text-center text-gray-700">
+      <span className="text-md-regular mt-6 text-center text-textLight">
         Not a member?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}

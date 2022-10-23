@@ -6,7 +6,7 @@ const EditButton: React.FC<React.HTMLAttributes<HTMLButtonElement>> = (
   return (
     <div>
       <button
-        className="text-small-regular mt-2 text-gray-700 underline"
+        className="text-small-regular mt-2 text-textLight underline"
         {...props}
       >
         Edit

@@ -123,7 +123,7 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
                         className={clsx(
                           "text-small-regular flex cursor-pointer items-center justify-between border-b border-gray-200 py-4 px-8 last:border-b-0",
                           {
-                            "bg-gray-50": option.value === value,
+                            "bg-bgLight": option.value === value,
                           }
                         )}
                       >
@@ -133,14 +133,14 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
                             {option.label}
                           </span>
                         </div>
-                        <span className="justify-self-end text-gray-700">
+                        <span className="justify-self-end text-textLight">
                           {option.price}
                         </span>
                       </RadioGroup.Option>
                     )
                   })
                 ) : (
-                  <div className="flex flex-col items-center justify-center px-4 py-8 text-gray-900">
+                  <div className="flex flex-col items-center justify-center px-4 py-8 text-text">
                     <Spinner />
                   </div>
                 )}

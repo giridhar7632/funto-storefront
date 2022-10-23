@@ -34,7 +34,7 @@ const Container = ({ children }: ContainerProps) => {
         >
           <div className="trans absolute inset-0 overflow-hidden">
             <div className="right-left pointer-events-none fixed inset-y-0 flex max-w-full">
-              <div className="pointer-events-auto relative flex w-screen flex-col overflow-y-auto bg-white text-gray-900">
+              <div className="pointer-events-auto relative flex w-screen flex-col overflow-y-auto bg-[rgba(255,255,255,0.4)] text-text">
                 {children}
               </div>
             </div>

@@ -36,7 +36,7 @@ const MainMenu = () => {
           </button>
         </div>
         <div>
-          <h1 className="text-xl-semi uppercase">Acme</h1>
+          <h1 className="text-xl-semi uppercase">Funto</h1>
         </div>
         <div className="flex flex-1 basis-0 justify-end">
           <button onClick={close}>
@@ -48,7 +48,7 @@ const MainMenu = () => {
       <div className="flex flex-1 flex-col justify-between space-y-6 p-6">
         {process.env.FEATURE_SEARCH_ENABLED && (
           <button
-            className="flex items-center gap-x-2 bg-gray-50 px-4 py-2 text-gray-500"
+            className="flex items-center gap-x-2 bg-bgLight px-4 py-2 text-textLight"
             onClick={setScreenSearch}
           >
             <Search size={24} />
@@ -58,9 +58,9 @@ const MainMenu = () => {
           </button>
         )}
 
-        <div className="text-large-regular flex flex-1 flex-col text-gray-900">
+        <div className="text-large-regular flex flex-1 flex-col text-text">
           <ul className="flex flex-col gap-y-2">
-            <li className="bg-gray-50 p-4">
+            <li className="bg-bgLight p-4">
               <Link href="/store">
                 <a>
                   <button
@@ -77,7 +77,7 @@ const MainMenu = () => {
             {collections ? (
               <>
                 {collections.map((collection) => (
-                  <li key={collection.id} className="bg-gray-50 p-4">
+                  <li key={collection.id} className="bg-bgLight p-4">
                     <Link href={`/collections/${collection.id}`}>
                       <a>
                         <button
@@ -103,7 +103,7 @@ const MainMenu = () => {
           <div className="text-small-regular flex flex-col gap-y-8">
             {!customer ? (
               <div className="flex flex-col gap-y-4">
-                <span className="uppercase text-gray-700">Account</span>
+                <span className="uppercase text-textLight">Account</span>
                 <Link href={`/account/login`} passHref>
                   <a>
                     <button
@@ -119,7 +119,7 @@ const MainMenu = () => {
               </div>
             ) : (
               <div className="flex flex-col gap-y-4">
-                <span className="uppercase text-gray-700">Signed in as</span>
+                <span className="uppercase text-textLight">Signed in as</span>
                 <Link href={`/account`} passHref>
                   <a>
                     <button
@@ -135,7 +135,7 @@ const MainMenu = () => {
               </div>
             )}
             <div className="flex flex-col gap-y-4">
-              <span className="uppercase text-gray-700">Delivery</span>
+              <span className="uppercase text-textLight">Delivery</span>
               <button
                 className="flex items-center justify-between border-b border-gray-200 py-2"
                 onClick={setScreenCountry}

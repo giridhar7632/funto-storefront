@@ -13,15 +13,15 @@ const AccountLayout: React.FC = ({ children }) => {
 
   if (retrievingCustomer || !customer) {
     return (
-      <div className="flex h-full min-h-[640px] w-full items-center justify-center text-gray-900">
+      <div className="flex h-full min-h-[640px] w-full items-center justify-center text-text">
         <Spinner size={36} />
       </div>
     )
   }
 
   return (
-    <div className="flex-1 small:bg-gray-50 small:py-12">
-      <div className="mx-auto flex h-full max-w-5xl flex-1 flex-col bg-white">
+    <div className="flex-1 rounded-md small:bg-bgLight small:py-12">
+      <div className="mx-auto flex h-full max-w-5xl flex-1 flex-col bg-[rgba(255,255,255,0.4)]">
         <div className="grid grid-cols-1 py-6 small:grid-cols-[240px_1fr] small:px-8 small:py-12 ">
           <div>
             <AccountNav />

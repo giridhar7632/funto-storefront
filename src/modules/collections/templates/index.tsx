@@ -79,7 +79,7 @@ const CollectionTemplate: React.FC<CollectionTemplateProps> = ({
           ))}
       </ul>
       <div
-        className="text-small-regular flex items-center justify-center py-16 text-gray-700"
+        className="text-small-regular flex items-center justify-center py-16 text-textLight"
         ref={ref}
       >
         <span ref={ref}>Loading ...</span>

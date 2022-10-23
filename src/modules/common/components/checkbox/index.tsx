@@ -22,7 +22,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
       <div
         role="checkbox"
         aria-checked={checked}
-        className="flex h-5 w-5 items-center justify-center border border-gray-900"
+        className="flex h-5 w-5 items-center justify-center border border-text"
       >
         {checked ? "✓" : null}
       </div>

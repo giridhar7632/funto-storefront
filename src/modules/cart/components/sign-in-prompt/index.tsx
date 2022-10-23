@@ -3,10 +3,10 @@ import Link from "next/link"
 
 const SignInPrompt = () => {
   return (
-    <div className="flex items-start justify-between bg-white">
+    <div className="flex items-start justify-between bg-[rgba(255,255,255,0.4)]">
       <div>
         <h2 className="text-xl-semi">Already have an account?</h2>
-        <p className="text-base-regular mt-2 text-gray-700">
+        <p className="text-base-regular mt-2 text-textLight">
           Sign in for a better experience.
         </p>
       </div>

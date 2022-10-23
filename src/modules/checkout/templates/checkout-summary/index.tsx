@@ -13,11 +13,11 @@ const CheckoutSummary = () => {
 
   return (
     <div className="sticky top-0 flex flex-col-reverse gap-y-8 small:flex-col">
-      <div className="flex w-full flex-col gap-y-6 bg-white p-6">
+      <div className="flex w-full flex-col gap-y-6 bg-[rgba(255,255,255,0.4)] p-6">
         <CartTotals cart={cart} />
         <PaymentButton paymentSession={cart?.payment_session} />
       </div>
-      <div className="bg-white p-6">
+      <div className="bg-[rgba(255,255,255,0.4)] p-6">
         <DiscountCode cart={cart} />
       </div>
       <GiftCard cart={cart} />

@@ -27,7 +27,7 @@ const CountryMenu = () => {
             className="flex items-center gap-x-2"
             onClick={() => setScreen("main")}
           >
-            <ChevronDown className="rotate-90 text-gray-700" size={20} />
+            <ChevronDown className="rotate-90 text-textLight" size={20} />
           </button>
         </div>
         <div>

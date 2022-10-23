@@ -45,12 +45,12 @@ const MobileActions: React.FC<MobileActionsProps> = ({ product, show }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="text-large-regular flex h-full w-full flex-col items-center justify-center gap-y-3 border-t border-gray-200 bg-white p-4">
+          <div className="text-large-regular flex h-full w-full flex-col items-center justify-center gap-y-3 border-t border-gray-200 bg-[rgba(255,255,255,0.4)] p-4">
             <div className="flex items-center gap-x-2">
               <span>{product.title}</span>
               <span>—</span>
               {selectedPrice ? (
-                <div className="flex items-end gap-x-2 text-gray-700">
+                <div className="flex items-end gap-x-2 text-textLight">
                   {selectedPrice.price_type === "sale" && (
                     <p>
                       <span className="text-small-regular line-through">
@@ -117,12 +117,12 @@ const MobileActions: React.FC<MobileActionsProps> = ({ product, show }) => {
                   <div className="flex w-full justify-end pr-6">
                     <button
                       onClick={close}
-                      className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900"
+                      className="flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(255,255,255,0.4)] text-text"
                     >
                       <X />
                     </button>
                   </div>
-                  <div className="bg-white px-6 py-12">
+                  <div className="bg-[rgba(255,255,255,0.4)] px-6 py-12">
                     {product.variants.length > 1 && (
                       <div className="flex flex-col gap-y-6">
                         {product.options.map((option) => {

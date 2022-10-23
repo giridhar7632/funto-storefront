@@ -14,13 +14,13 @@ const ProductPreview = ({
       <a>
         <div className="overflow-hidden rounded-md border-textBtn bg-[rgba(255,255,255,0.4)]">
           <Thumbnail thumbnail={thumbnail} size="full" />
-          <div className="text-lg-regular m-2 p-3">
+          <div className="small:text-lg-regular m-2  p-3 2xsmall:text-sm">
             <span>{title}</span>
             <div className="mt-1 flex items-center gap-x-2 font-serif text-xl font-semibold text-brown">
               {price ? (
                 <>
                   {price.price_type === "sale" && (
-                    <span className="text-gray-500 line-through">
+                    <span className="text-textLight line-through">
                       {price.original_price}
                     </span>
                   )}

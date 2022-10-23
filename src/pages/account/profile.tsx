@@ -8,7 +8,7 @@ import { NextPageWithLayout } from "types/global"
 const Profile: NextPageWithLayout = () => {
   return (
     <>
-      <Meta name="Profile" description="View and edit your ACME profile." />
+      <Meta name="Profile" description="View and edit your Funto profile." />
       <ProfileTemplate />
     </>
   )

@@ -6,7 +6,7 @@ import { NextPageWithLayout } from "types/global"
 const Login: NextPageWithLayout = () => {
   return (
     <>
-      <Meta name="Sign in" description="Sign in to your ACME account." />
+      <Meta name="Sign in" description="Sign in to your Funto account." />
       <LoginTemplate />
     </>
   )

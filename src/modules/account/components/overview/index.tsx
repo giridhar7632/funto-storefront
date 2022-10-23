@@ -60,7 +60,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
       <div className="hidden small:block">
         <div className="text-xl-semi mb-4 flex items-start justify-between">
           <span>Hello {customer?.first_name}</span>
-          <span className="text-small-regular text-gray-700">
+          <span className="text-small-regular text-textLight">
             Signed in as:{" "}
             <span className="font-semibold">{customer?.email}</span>
           </span>
@@ -74,7 +74,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                   <span className="text-3xl-semi leading-none">
                     {getProfileCompletion(customer)}%
                   </span>
-                  <span className="text-base-regular uppercase text-gray-500">
+                  <span className="text-base-regular uppercase text-textLight">
                     Completed
                   </span>
                 </div>
@@ -86,7 +86,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                   <span className="text-3xl-semi leading-none">
                     {customer?.shipping_addresses?.length || 0}
                   </span>
-                  <span className="text-base-regular uppercase text-gray-500">
+                  <span className="text-base-regular uppercase text-textLight">
                     Saved
                   </span>
                 </div>
@@ -104,7 +104,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                       <li key={order.id}>
                         <Link href={`/order/details/${order.id}`}>
                           <a>
-                            <div className="flex items-center justify-between bg-gray-50 p-4">
+                            <div className="flex items-center justify-between bg-bgLight p-4">
                               <div className="text-small-regular grid flex-1 grid-cols-3 grid-rows-2 gap-x-4">
                                 <span className="font-semibold">
                                   Date placed
@@ -119,7 +119,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                                   {new Date(order.created_at).toDateString()}
                                 </span>
                                 <span>#{order.display_id}</span>
-                                <span>
+                                <span className="font-serif">
                                   {formatAmount({
                                     amount: order.total,
                                     region: order.region,

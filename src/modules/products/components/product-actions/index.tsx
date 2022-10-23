@@ -32,7 +32,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
           </a>
         </Link>
       )}
-      <h3 className="text-2xl-regular font-sans font-medium text-text">
+      <h3 className="text-2xl-regular font-serif font-medium text-text">
         {product.title}
       </h3>
 
@@ -68,7 +68,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
             {selectedPrice.price_type === "sale" && (
               <>
                 <p>
-                  <span className="text-gray-500">Original: </span>
+                  <span className="text-textLight">Original: </span>
                   <span className="line-through">
                     {selectedPrice.original_price}
                   </span>

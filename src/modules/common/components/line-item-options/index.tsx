@@ -4,7 +4,7 @@ type LineItemOptionsProps = { variant: ProductVariant }
 
 const LineItemOptions = ({ variant }: LineItemOptionsProps) => {
   return (
-    <div className="text-small-regular text-gray-700">
+    <div className="text-small-regular text-textLight">
       {variant.options.map((option) => {
         const optionName =
           variant.product.options.find((opt) => opt.id === option.option_id)

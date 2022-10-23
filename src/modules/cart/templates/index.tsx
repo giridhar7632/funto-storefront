@@ -17,11 +17,11 @@ const CartTemplate = () => {
   }
 
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-bgLight  py-12">
       <div className="content-container">
         {cart.items.length ? (
           <div className="grid grid-cols-1 gap-x-8 small:grid-cols-[1fr_360px]">
-            <div className="flex flex-col gap-y-6 bg-white p-6">
+            <div className="flex flex-col gap-y-6 rounded-md bg-[rgba(255,255,255,0.4)] p-6">
               {!customer && <SignInPrompt />}
               <ItemsTemplate region={cart?.region} items={items} />
             </div>
@@ -29,10 +29,10 @@ const CartTemplate = () => {
               <div className="sticky top-12 flex flex-col gap-y-8">
                 {cart && cart.region && (
                   <>
-                    <div className="bg-white p-6">
+                    <div className="rounded-md bg-[rgba(255,255,255,0.4)] p-6 shadow-sm">
                       <Summary cart={cart} />
                     </div>
-                    <div className="bg-white p-6">
+                    <div className="rounded-md bg-[rgba(255,255,255,0.4)] p-6 shadow-sm">
                       <DiscountCode cart={cart} />
                     </div>
                   </>

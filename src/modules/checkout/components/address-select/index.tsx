@@ -56,7 +56,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
   return (
     <Listbox onChange={handleSelect} value={selected}>
       <div className="relative">
-        <Listbox.Button className="text-base-regular relative flex w-full cursor-default items-center justify-between border border-gray-200 bg-white px-4 py-[10px] text-left focus:outline-none focus-visible:border-gray-300 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-300">
+        <Listbox.Button className="text-base-regular relative flex w-full cursor-default items-center justify-between border border-gray-200 bg-[rgba(255,255,255,0.4)] px-4 py-[10px] text-left focus:outline-none focus-visible:border-gray-300 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-300">
           {({ open }) => (
             <>
               <span className="block truncate">
@@ -77,13 +77,13 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="text-small-regular border-top-0 absolute z-20 max-h-60 w-full overflow-auto border border-gray-200 bg-white focus:outline-none sm:text-sm">
+          <Listbox.Options className="text-small-regular border-top-0 absolute z-20 max-h-60 w-full overflow-auto border border-gray-200 bg-[rgba(255,255,255,0.4)] focus:outline-none sm:text-sm">
             {addresses.map((address) => {
               return (
                 <Listbox.Option
                   key={address.id}
                   value={address.id}
-                  className="relative cursor-default select-none py-4 pl-6 pr-10 hover:bg-gray-50"
+                  className="relative cursor-default select-none py-4 pl-6 pr-10 hover:bg-bgLight"
                 >
                   <div className="flex items-start gap-x-4">
                     <Radio checked={selected === address.id} />
@@ -92,7 +92,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
                         {address.first_name} {address.last_name}
                       </span>
                       {address.company && (
-                        <span className="text-small-regular text-gray-700">
+                        <span className="text-small-regular text-textLight">
                           {address.company}
                         </span>
                       )}

@@ -69,8 +69,8 @@ const FooterNav = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse justify-center gap-y-4 xsmall:flex-row xsmall:items-end xsmall:items-center xsmall:justify-between">
-        <span className="text-xsmall-regular text-gray-500">
+      <div className="flex flex-col-reverse items-end justify-center gap-y-4 xsmall:flex-row xsmall:items-center xsmall:justify-between">
+        <span className="text-xsmall-regular text-textLight">
           © Copyright 2022 Funto
         </span>
         <div className="flex min-w-[316px] xsmall:justify-end">

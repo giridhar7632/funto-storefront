@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> & {
             >
               <Dialog.Panel
                 className={clsx(
-                  "h-full max-h-[65vh] w-full transform overflow-hidden bg-white p-10 text-left align-middle shadow-xl transition-all",
+                  "h-full max-h-[65vh] w-full transform overflow-hidden bg-[rgba(255,255,255,0.4)] p-10 text-left align-middle shadow-xl transition-all",
                   {
                     "max-w-md": size === "small",
                     "max-w-xl": size === "medium",
@@ -79,7 +79,7 @@ const Title: React.FC = ({ children }) => {
 
 const Description: React.FC = ({ children }) => {
   return (
-    <Dialog.Description className="text-small-regular flex h-full items-center justify-center pt-2 pb-4 text-gray-700">
+    <Dialog.Description className="text-small-regular flex h-full items-center justify-center pt-2 pb-4 text-textLight">
       {children}
     </Dialog.Description>
   )

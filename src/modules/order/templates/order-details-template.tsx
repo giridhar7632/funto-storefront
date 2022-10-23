@@ -15,9 +15,9 @@ const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
   order,
 }) => {
   return (
-    <div className="min-h-[calc(100vh-64px)] bg-gray-50 py-6">
+    <div className="min-h-[calc(100vh-64px)] bg-bgLight py-6">
       <div className="content-container flex justify-center">
-        <div className="h-full w-full max-w-4xl bg-white">
+        <div className="h-full w-full max-w-4xl bg-[rgba(255,255,255,0.4)]">
           <OrderDetails order={order} showStatus />
           <Items
             items={order.items}

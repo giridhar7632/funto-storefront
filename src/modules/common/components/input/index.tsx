@@ -43,7 +43,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             name={name}
             placeholder=" "
             className={clsx(
-              "mt-0 block w-full appearance-none border border-gray-200 bg-transparent px-4 pt-4 pb-1 focus:border-gray-400 focus:outline-none focus:ring-0",
+              "mt-0 block w-full appearance-none rounded border border-textBtn bg-transparent px-4 pt-4 pb-1 focus:border-gray-400 focus:outline-none focus:ring-0",
               {
                 "border-rose-500 focus:border-rose-500": hasError,
               }
@@ -55,7 +55,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             htmlFor={name}
             onClick={() => inputRef.current?.focus()}
             className={clsx(
-              "-z-1 origin-0 absolute top-3 mx-3 px-1 text-gray-500 transition-all duration-300",
+              "-z-1 origin-0 absolute top-3 mx-3 px-1 text-textLight transition-all duration-300",
               {
                 "!text-rose-500": hasError,
               }
@@ -68,7 +68,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-0 top-3 px-4 text-gray-400 outline-none transition-all duration-150 focus:text-gray-700 focus:outline-none"
+              className="absolute right-0 top-3 px-4 text-textLight outline-none transition-all duration-150 focus:text-textLight focus:outline-none"
             >
               {showPassword ? <Eye /> : <EyeOff />}
             </button>

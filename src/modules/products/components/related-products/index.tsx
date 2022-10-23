@@ -58,7 +58,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
         <span className="text-base-regular mb-6 text-gray-600">
           Related products
         </span>
-        <p className="text-2xl-regular max-w-lg text-gray-900">
+        <p className="text-2xl-regular max-w-lg text-text">
           You might also want to check out these products.
         </p>
       </div>

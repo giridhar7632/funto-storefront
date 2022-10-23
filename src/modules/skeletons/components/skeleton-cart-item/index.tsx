@@ -14,7 +14,7 @@ const SkeletonCartItem = () => {
         <div className="text-small-regular flex flex-1 items-end justify-between">
           {/* <div>
               <button
-                className="flex items-center gap-x-1 text-gray-500"
+                className="flex items-center gap-x-1 text-textLight"
                 onClick={() => deleteItem(item.id)}
               >
                 <Trash size={14} />
