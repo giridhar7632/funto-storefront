@@ -13,7 +13,7 @@ const useProductPrice = ({ id, variantId }: useProductPriceProps) => {
   const { products, isLoading, isError } = useProducts(
     {
       id: id,
-      cart_id: cart?.id,
+      cart_id: cart?.id
     },
     { enabled: !!cart }
   )
@@ -42,18 +42,18 @@ const useProductPrice = ({ id, variantId }: useProductPriceProps) => {
       calculated_price: formatAmount({
         amount: cheapestVariant.calculated_price,
         region: cart.region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       original_price: formatAmount({
         amount: cheapestVariant.original_price,
         region: cart.region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       price_type: cheapestVariant.calculated_price_type,
       percentage_diff: getPercentageDiff(
         cheapestVariant.original_price,
         cheapestVariant.calculated_price
-      ),
+      )
     }
   }, [product, cart])
 
@@ -74,18 +74,18 @@ const useProductPrice = ({ id, variantId }: useProductPriceProps) => {
       calculated_price: formatAmount({
         amount: variant.calculated_price,
         region: cart.region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       original_price: formatAmount({
         amount: variant.original_price,
         region: cart.region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       price_type: variant.calculated_price_type,
       percentage_diff: getPercentageDiff(
         variant.original_price,
         variant.calculated_price
-      ),
+      )
     }
   }, [product, variantId, cart])
 
@@ -94,7 +94,7 @@ const useProductPrice = ({ id, variantId }: useProductPriceProps) => {
     cheapestPrice,
     variantPrice,
     isLoading,
-    isError,
+    isError
   }
 }
 

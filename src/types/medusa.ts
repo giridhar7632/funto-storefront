@@ -1,7 +1,7 @@
 import {
   Product as MedusaProduct,
   ProductVariant,
-  Region as MedusaRegion,
+  Region as MedusaRegion
 } from "@medusajs/medusa"
 
 export type Variant = Omit<ProductVariant, "beforeInsert">

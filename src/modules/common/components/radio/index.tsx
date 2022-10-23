@@ -6,7 +6,7 @@ const Radio = ({ checked }: { checked: boolean }) => {
       className={clsx(
         "flex h-3 w-3 items-center justify-center rounded-full border border-gray-200",
         {
-          "border-text": checked,
+          "border-text": checked
         }
       )}
     >

@@ -31,7 +31,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           {formatAmount({
             amount: order.total,
             region: order.region,
-            includeTaxes: false,
+            includeTaxes: false
           })}
         </span>
         <span className="pl-2">{`${numberOfLines} ${

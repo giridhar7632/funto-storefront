@@ -29,7 +29,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
 
   const currentShippingAddress = useWatch({
     control,
-    name: "shipping_address",
+    name: "shipping_address"
   })
 
   const selectedAddress = useMemo(() => {
@@ -42,7 +42,7 @@ const AddressSelect = ({ addresses }: AddressSelectProps) => {
           "country",
           "deleted_at",
           "metadata",
-          "customer_id",
+          "customer_id"
         ]),
         currentShippingAddress
       )

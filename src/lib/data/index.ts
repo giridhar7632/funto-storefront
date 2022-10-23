@@ -39,8 +39,8 @@ const getGlobalData = async () => {
       hasMoreCollections: totalCount > COL_LIMIT,
       collections:
         collections?.map((c) => ({ id: c.id, title: c.title })) || [],
-      featuredProducts,
-    },
+      featuredProducts
+    }
   }
 }
 
@@ -48,7 +48,7 @@ export const getSiteData = async () => {
   const globalData = await getGlobalData()
 
   return {
-    site: globalData,
+    site: globalData
   }
 }
 
@@ -66,8 +66,8 @@ export const getProductData = async (handle: string) => {
 
   return {
     page: {
-      data: product,
-    },
+      data: product
+    }
   }
 }
 
@@ -78,7 +78,7 @@ const getInitialProducts = async (collectionId: string) => {
       return {
         initialProducts: products,
         count: count,
-        hasMore: count > 10,
+        hasMore: count > 10
       }
     })
     .catch((_) => ({ initialProducts: [], count: 0, hasMore: false }))
@@ -104,9 +104,9 @@ export const getCollectionData = async (id: string) => {
   return {
     page: {
       data,
-      additionalData,
+      additionalData
     },
-    site: siteData,
+    site: siteData
   }
 }
 
@@ -117,16 +117,16 @@ type FetchProductListParams = {
 
 export const fetchProductsList = async ({
   pageParam = 0,
-  queryParams,
+  queryParams
 }: FetchProductListParams) => {
   const { products, count, offset } = await medusaClient.products.list({
     limit: 12,
     offset: pageParam,
-    ...queryParams,
+    ...queryParams
   })
 
   return {
     response: { products, count },
-    nextPage: count > offset + 12 ? offset + 12 : null,
+    nextPage: count > offset + 12 ? offset + 12 : null
   }
 }

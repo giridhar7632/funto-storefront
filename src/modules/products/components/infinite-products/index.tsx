@@ -30,7 +30,7 @@ const InfiniteProducts = ({ params }: InfiniteProductsType) => {
 
     return {
       ...p,
-      ...params,
+      ...params
     }
   }, [cart?.id, params])
 
@@ -39,7 +39,7 @@ const InfiniteProducts = ({ params }: InfiniteProductsType) => {
       [`infinite-products-store`, queryParams, cart],
       ({ pageParam }) => fetchProductsList({ pageParam, queryParams }),
       {
-        getNextPageParam: (lastPage) => lastPage.nextPage,
+        getNextPageParam: (lastPage) => lastPage.nextPage
       }
     )
 

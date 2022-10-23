@@ -31,7 +31,7 @@ const ProductPage: NextPageWithLayout<PrefetchedPageProps> = ({ notFound }) => {
     () => fetchProduct(handle),
     {
       enabled: handle.length > 0,
-      keepPreviousData: true,
+      keepPreviousData: true
     }
   )
 
@@ -75,7 +75,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const handles = await getProductHandles()
   return {
     paths: handles.map((handle) => ({ params: { handle } })),
-    fallback: true,
+    fallback: true
   }
 }
 
@@ -93,16 +93,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
   if (!queryData) {
     return {
       props: {
-        notFound: true,
-      },
+        notFound: true
+      }
     }
   }
 
   return {
     props: {
       dehydratedState: dehydrate(queryClient),
-      notFound: false,
-    },
+      notFound: false
+    }
   }
 }
 

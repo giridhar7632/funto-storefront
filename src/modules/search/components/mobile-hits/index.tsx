@@ -3,7 +3,7 @@ import React from "react"
 import {
   useHits,
   UseHitsProps,
-  useSearchBox,
+  useSearchBox
 } from "react-instantsearch-hooks-web"
 
 type HitsProps<THit> = React.ComponentProps<"div"> &

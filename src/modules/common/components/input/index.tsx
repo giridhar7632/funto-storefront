@@ -45,7 +45,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={clsx(
               "mt-0 block w-full appearance-none rounded border border-textBtn bg-transparent px-4 pt-4 pb-1 focus:border-gray-400 focus:outline-none focus:ring-0",
               {
-                "border-rose-500 focus:border-rose-500": hasError,
+                "border-rose-500 focus:border-rose-500": hasError
               }
             )}
             {...props}
@@ -57,7 +57,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             className={clsx(
               "-z-1 origin-0 absolute top-3 mx-3 px-1 text-textLight transition-all duration-300",
               {
-                "!text-rose-500": hasError,
+                "!text-rose-500": hasError
               }
             )}
           >

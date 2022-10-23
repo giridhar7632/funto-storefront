@@ -38,7 +38,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       case "fixed":
         return `- ${formatAmount({
           amount: discounts[0].rule.value,
-          region: region,
+          region: region
         })}`
 
       default:
@@ -50,15 +50,15 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
     register,
     handleSubmit,
     setError,
-    formState: { errors },
+    formState: { errors }
   } = useForm<DiscountFormValues>({
-    mode: "onSubmit",
+    mode: "onSubmit"
   })
 
   const onApply = (data: DiscountFormValues) => {
     mutate(
       {
-        discounts: [{ code: data.discount_code }],
+        discounts: [{ code: data.discount_code }]
       },
       {
         onSuccess: ({ cart }) => setCart(cart),
@@ -66,13 +66,13 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           setError(
             "discount_code",
             {
-              message: "Code is invalid",
+              message: "Code is invalid"
             },
             {
-              shouldFocus: true,
+              shouldFocus: true
             }
           )
-        },
+        }
       }
     )
   }
@@ -83,7 +83,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       {
         onSuccess: ({ cart }) => {
           setCart(cart)
-        },
+        }
       }
     )
   }
@@ -117,7 +117,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               <Input
                 label="Code"
                 {...register("discount_code", {
-                  required: "Code is required",
+                  required: "Code is required"
                 })}
                 errors={errors}
               />

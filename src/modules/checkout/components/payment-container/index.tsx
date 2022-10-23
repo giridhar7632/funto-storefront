@@ -15,30 +15,30 @@ type PaymentContainerProps = {
 const PaymentInfoMap: Record<string, { title: string; description: string }> = {
   stripe: {
     title: "Credit card",
-    description: "Secure payment with credit card",
+    description: "Secure payment with credit card"
   },
   paypal: {
     title: "PayPal",
-    description: "Secure payment with PayPal",
+    description: "Secure payment with PayPal"
   },
   manual: {
     title: "Test payment",
-    description: "Test payment using medusa-payment-manual",
-  },
+    description: "Test payment using medusa-payment-manual"
+  }
 }
 
 const PaymentContainer: React.FC<PaymentContainerProps> = ({
   paymentSession,
   selected,
   setSelected,
-  disabled = false,
+  disabled = false
 }) => {
   return (
     <div
       className={clsx(
         "flex flex-col gap-y-4 border-b border-gray-200 last:border-b-0",
         {
-          "bg-bgLight": selected,
+          "bg-bgLight": selected
         }
       )}
     >
@@ -67,7 +67,7 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
 }
 
 const PaymentElement = ({
-  paymentSession,
+  paymentSession
 }: {
   paymentSession: PaymentSession
 }) => {

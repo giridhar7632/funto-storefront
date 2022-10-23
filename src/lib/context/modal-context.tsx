@@ -15,7 +15,7 @@ export const ModalProvider = ({ children, close }: ModalProviderProps) => {
   return (
     <ModalContext.Provider
       value={{
-        close,
+        close
       }}
     >
       {children}

@@ -60,7 +60,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
           <div className="flex flex-col font-serif text-2xl font-semibold text-brown">
             <span
               className={clsx("text-xl-semi", {
-                "text-rose-600": selectedPrice.price_type === "sale",
+                "text-rose-600": selectedPrice.price_type === "sale"
               })}
             >
               {selectedPrice.calculated_price}

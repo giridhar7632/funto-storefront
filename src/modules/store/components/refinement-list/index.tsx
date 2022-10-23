@@ -9,7 +9,7 @@ type RefinementListProps = {
 
 const RefinementList = ({
   refinementList,
-  setRefinementList,
+  setRefinementList
 }: RefinementListProps) => {
   const { collections, isLoading } = useCollections()
 
@@ -26,7 +26,7 @@ const RefinementList = ({
     if (checked && !exists) {
       setRefinementList({
         ...refinementList,
-        collection_id: [...collectionIds, id],
+        collection_id: [...collectionIds, id]
       })
 
       return
@@ -35,7 +35,7 @@ const RefinementList = ({
     if (!checked && exists) {
       setRefinementList({
         ...refinementList,
-        collection_id: collectionIds.filter((c) => c !== id),
+        collection_id: collectionIds.filter((c) => c !== id)
       })
 
       return

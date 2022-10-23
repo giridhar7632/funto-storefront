@@ -18,7 +18,7 @@ const StepContainer = ({
   ...props
 }: StepContainerProps) => {
   const {
-    editAddresses: { state },
+    editAddresses: { state }
   } = useCheckout()
   return (
     <div>
@@ -27,7 +27,7 @@ const StepContainer = ({
           "rounded-md bg-[rgba(255,255,255,0.4)] shadow-sm",
           className,
           {
-            "pointer-events-none select-none opacity-50 shadow-none": state,
+            "pointer-events-none select-none opacity-50 shadow-none": state
           }
         )}
         {...props}
@@ -45,7 +45,7 @@ const StepContainer = ({
               "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
               {
                 "max-h-[9999px] opacity-100": !state,
-                "max-h-0 opacity-0": state,
+                "max-h-0 opacity-0": state
               }
             )}
           >
@@ -57,7 +57,7 @@ const StepContainer = ({
               "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
               {
                 "max-h-[9999px] opacity-100": state,
-                "max-h-0 opacity-0": !state,
+                "max-h-0 opacity-0": !state
               }
             )}
           >

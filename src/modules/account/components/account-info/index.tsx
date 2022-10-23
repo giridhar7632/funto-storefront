@@ -23,7 +23,7 @@ const AccountInfo = ({
   isError,
   clearState,
   errorMessage = "An error occurred, please try again",
-  children,
+  children
 }: AccountInfoProps) => {
   const { state, close, toggle } = useToggleState()
 
@@ -71,7 +71,7 @@ const AccountInfo = ({
             "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
             {
               "max-h-[1000px] opacity-100": isSuccess,
-              "max-h-0 opacity-0": !isSuccess,
+              "max-h-0 opacity-0": !isSuccess
             }
           )}
         >
@@ -89,7 +89,7 @@ const AccountInfo = ({
             "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
             {
               "max-h-[1000px] opacity-100": isError,
-              "max-h-0 opacity-0": !isError,
+              "max-h-0 opacity-0": !isError
             }
           )}
         >
@@ -106,7 +106,7 @@ const AccountInfo = ({
             "overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
             {
               "max-h-[1000px] opacity-100": state,
-              "max-h-0 opacity-0": !state,
+              "max-h-0 opacity-0": !state
             }
           )}
         >

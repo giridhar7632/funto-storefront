@@ -17,7 +17,7 @@ const MainMenu = () => {
 
   const {
     close,
-    screen: [_, setScreen],
+    screen: [_, setScreen]
   } = useMobileMenu()
 
   const setScreenCountry = () => setScreen("country")

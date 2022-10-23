@@ -15,7 +15,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "nearest",
+        inline: "nearest"
       })
     }
   }

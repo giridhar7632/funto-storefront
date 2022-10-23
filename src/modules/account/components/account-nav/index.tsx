@@ -72,7 +72,7 @@ const AccountNavLink = ({ href, route, children }: AccountNavLinkProps) => {
     <Link href={href}>
       <a
         className={clsx("text-textLight", {
-          "font-semibold text-text": active,
+          "font-semibold text-text": active
         })}
       >
         {children}

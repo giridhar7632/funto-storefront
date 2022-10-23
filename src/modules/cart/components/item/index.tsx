@@ -31,7 +31,7 @@ const Item = ({ item, region }: ItemProps) => {
             onChange={(value) =>
               updateItem({
                 lineId: item.id,
-                quantity: parseInt(value.target.value),
+                quantity: parseInt(value.target.value)
               })
             }
             className="max-h-[35px] w-[75px]"

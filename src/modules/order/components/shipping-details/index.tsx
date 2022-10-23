@@ -7,7 +7,7 @@ type ShippingDetailsProps = {
 
 const ShippingDetails = ({
   address,
-  shippingMethods,
+  shippingMethods
 }: ShippingDetailsProps) => {
   return (
     <div className="text-base-regular">

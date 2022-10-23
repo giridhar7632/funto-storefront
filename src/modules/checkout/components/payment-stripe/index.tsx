@@ -1,12 +1,12 @@
 import {
   CardCvcElement,
   CardExpiryElement,
-  CardNumberElement,
+  CardNumberElement
 } from "@stripe/react-stripe-js"
 import {
   StripeCardCvcElementOptions,
   StripeCardExpiryElementOptions,
-  StripeCardNumberElementOptions,
+  StripeCardNumberElementOptions
 } from "@stripe/stripe-js"
 import React, { useMemo } from "react"
 
@@ -22,10 +22,10 @@ const PaymentStripe: React.FC = () => {
           color: "#424270",
           padding: "10px 12px",
           "::placeholder": {
-            color: "#CFD7E0",
-          },
-        },
-      },
+            color: "#CFD7E0"
+          }
+        }
+      }
     }
   }, [])
 
@@ -43,7 +43,7 @@ const PaymentStripe: React.FC = () => {
 }
 
 const CardNumber = ({
-  options,
+  options
 }: {
   options: StripeCardNumberElementOptions
 }) => {
@@ -58,7 +58,7 @@ const CardNumber = ({
 }
 
 const CardExpiry = ({
-  options,
+  options
 }: {
   options: StripeCardExpiryElementOptions
 }) => {

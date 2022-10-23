@@ -26,19 +26,19 @@ const transformProductPreview = (
       calculated_price: formatAmount({
         amount: cheapestVariant.calculated_price,
         region: region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       original_price: formatAmount({
         amount: cheapestVariant.original_price,
         region: region,
-        includeTaxes: false,
+        includeTaxes: false
       }),
       difference: getPercentageDiff(
         cheapestVariant.original_price,
         cheapestVariant.calculated_price
       ),
-      price_type: cheapestVariant.calculated_price_type,
-    },
+      price_type: cheapestVariant.calculated_price_type
+    }
   }
 }
 

@@ -4,7 +4,7 @@ import React from "react"
 const Logo: React.FC<{ label: string; className?: string }> = ({
   label,
   className,
-  children,
+  children
 }) => {
   return (
     <div>

@@ -25,7 +25,7 @@ const ShippingAddress = () => {
               label="Email"
               {...register("email", {
                 required: "Email is required",
-                pattern: emailRegex,
+                pattern: emailRegex
               })}
               autoComplete="email"
               errors={errors}
@@ -35,7 +35,7 @@ const ShippingAddress = () => {
               <Input
                 label="First name"
                 {...register("shipping_address.first_name", {
-                  required: "First name is required",
+                  required: "First name is required"
                 })}
                 autoComplete="given-name"
                 errors={errors}
@@ -44,7 +44,7 @@ const ShippingAddress = () => {
               <Input
                 label="Last name"
                 {...register("shipping_address.last_name", {
-                  required: "Last name is required",
+                  required: "Last name is required"
                 })}
                 autoComplete="family-name"
                 errors={errors}
@@ -61,7 +61,7 @@ const ShippingAddress = () => {
             <Input
               label="Address"
               {...register("shipping_address.address_1", {
-                required: "Address is required",
+                required: "Address is required"
               })}
               autoComplete="address-line1"
               errors={errors}
@@ -78,7 +78,7 @@ const ShippingAddress = () => {
               <Input
                 label="Postal code"
                 {...register("shipping_address.postal_code", {
-                  required: "Postal code is required",
+                  required: "Postal code is required"
                 })}
                 autoComplete="postal-code"
                 errors={errors}
@@ -87,7 +87,7 @@ const ShippingAddress = () => {
               <Input
                 label="City"
                 {...register("shipping_address.city", {
-                  required: "City is required",
+                  required: "City is required"
                 })}
                 autoComplete="address-level2"
                 errors={errors}
@@ -96,7 +96,7 @@ const ShippingAddress = () => {
             </div>
             <CountrySelect
               {...register("shipping_address.country_code", {
-                required: "Country is required",
+                required: "Country is required"
               })}
               autoComplete="country"
               errors={errors}

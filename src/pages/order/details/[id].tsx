@@ -24,7 +24,7 @@ const Confirmed: NextPageWithLayout = () => {
     () => fetchOrder(id),
     {
       enabled: id.length > 0,
-      staleTime: 60 * 60 * 1000, // 1 hour
+      staleTime: 60 * 60 * 1000 // 1 hour
     }
   )
 
@@ -63,7 +63,7 @@ Confirmed.getLayout = (page: ReactElement) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
-    fallback: "blocking",
+    fallback: "blocking"
   }
 }
 
@@ -77,8 +77,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      dehydratedState: dehydrate(queryClient),
-    },
+      dehydratedState: dehydrate(queryClient)
+    }
   }
 }
 

@@ -48,7 +48,7 @@ const Modal: React.FC<ModalProps> & {
                   {
                     "max-w-md": size === "small",
                     "max-w-xl": size === "medium",
-                    "max-w-3xl": size === "large",
+                    "max-w-3xl": size === "large"
                   }
                 )}
               >

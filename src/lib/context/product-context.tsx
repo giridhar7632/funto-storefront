@@ -7,7 +7,7 @@ import React, {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useState
 } from "react"
 import { Product, Variant } from "types/medusa"
 import { useStore } from "./store-context"
@@ -35,7 +35,7 @@ interface ProductProviderProps {
 
 export const ProductProvider = ({
   product,
-  children,
+  children
 }: ProductProviderProps) => {
   const [quantity, setQuantity] = useState<number>(1)
   const [options, setOptions] = useState<Record<string, string>>({})
@@ -122,7 +122,7 @@ export const ProductProvider = ({
     if (variant) {
       addItem({
         variantId: variant.id,
-        quantity,
+        quantity
       })
     }
   }
@@ -160,7 +160,7 @@ export const ProductProvider = ({
         updateOptions,
         decreaseQuantity,
         increaseQuantity,
-        formattedPrice,
+        formattedPrice
       }}
     >
       {children}

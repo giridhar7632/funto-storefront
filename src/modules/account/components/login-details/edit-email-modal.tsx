@@ -29,11 +29,11 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormValues>({
     defaultValues: {
-      email: customer.email,
-    },
+      email: customer.email
+    }
   })
 
   const { refetchCustomer } = useAccount()
@@ -59,7 +59,7 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
         onError: () => {
           setSubmitting(false)
           setError("Unable to update email, try again later.")
-        },
+        }
       }
     )
   })
@@ -77,8 +77,8 @@ const EditEmailModal: React.FC<EditEmailModalProps> = ({ customer }) => {
                 required: "Email is required",
                 pattern: {
                   value: emailRegex,
-                  message: "Must be a valid email",
-                },
+                  message: "Must be a valid email"
+                }
               })}
               errors={errors}
             />

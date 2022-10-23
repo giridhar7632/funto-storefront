@@ -9,7 +9,7 @@ const Payment = () => {
     cart,
     setPaymentSession,
     initPayment,
-    sameAsBilling: { state: isSame },
+    sameAsBilling: { state: isSame }
   } = useCheckout()
 
   /**

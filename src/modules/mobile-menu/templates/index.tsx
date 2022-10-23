@@ -6,7 +6,7 @@ import SearchMenu from "../components/search-menu"
 
 const MobileMenu = () => {
   const {
-    screen: [currentScreen],
+    screen: [currentScreen]
   } = useMobileMenu()
 
   return (

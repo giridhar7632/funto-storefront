@@ -8,12 +8,12 @@ module.exports = {
     policies: [
       {
         userAgent: "*",
-        allow: "/",
+        allow: "/"
       },
       {
         userAgent: "*",
-        disallow: excludedPaths,
-      },
-    ],
-  },
+        disallow: excludedPaths
+      }
+    ]
+  }
 }

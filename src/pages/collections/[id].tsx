@@ -19,14 +19,14 @@ interface Params extends ParsedUrlQuery {
 const fetchCollection = async (id: string) => {
   return await medusaClient.collections.retrieve(id).then(({ collection }) => ({
     id: collection.id,
-    title: collection.title,
+    title: collection.title
   }))
 }
 
 export const fetchCollectionProducts = async ({
   pageParam = 0,
   id,
-  cartId,
+  cartId
 }: {
   pageParam?: number
   id: string
@@ -36,17 +36,17 @@ export const fetchCollectionProducts = async ({
     limit: 12,
     offset: pageParam,
     collection_id: [id],
-    cart_id: cartId,
+    cart_id: cartId
   })
 
   return {
     response: { products, count },
-    nextPage: count > offset + 12 ? offset + 12 : null,
+    nextPage: count > offset + 12 ? offset + 12 : null
   }
 }
 
 const CollectionPage: NextPageWithLayout<PrefetchedPageProps> = ({
-  notFound,
+  notFound
 }) => {
   const { query, isFallback, replace } = useRouter()
   const id = typeof query.id === "string" ? query.id : ""
@@ -93,7 +93,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 
   return {
     paths: ids.map((id) => ({ params: { id } })),
-    fallback: true,
+    fallback: true
   }
 }
 
@@ -109,7 +109,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ["get_collection_products", id],
     ({ pageParam }) => fetchCollectionProducts({ pageParam, id }),
     {
-      getNextPageParam: (lastPage) => lastPage.nextPage,
+      getNextPageParam: (lastPage) => lastPage.nextPage
     }
   )
 
@@ -118,8 +118,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   if (!queryData) {
     return {
       props: {
-        notFound: true,
-      },
+        notFound: true
+      }
     }
   }
 
@@ -127,8 +127,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       // Work around see – https://github.com/TanStack/query/issues/1458#issuecomment-747716357
       dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
-      notFound: false,
-    },
+      notFound: false
+    }
   }
 }
 

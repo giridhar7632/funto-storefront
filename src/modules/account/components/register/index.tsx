@@ -28,7 +28,7 @@ const Register = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<RegisterCredentials>()
 
   const onSubmit = handleSubmit(async (credentials) => {
@@ -77,7 +77,7 @@ const Register = () => {
           <Input
             label="Password"
             {...register("password", {
-              required: "Password is required",
+              required: "Password is required"
             })}
             type="password"
             autoComplete="new-password"

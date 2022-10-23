@@ -15,12 +15,12 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
     return [
       {
         label: "Product Information",
-        component: <ProductInfoTab product={product} />,
+        component: <ProductInfoTab product={product} />
       },
       {
         label: "Shipping & Returns",
-        component: <ShippingInfoTab />,
-      },
+        component: <ShippingInfoTab />
+      }
     ]
   }, [product])
 
@@ -36,7 +36,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
                   clsx(
                     "text-small-regular transition-color -mb-px border-b border-textBtn pb-2 text-left uppercase duration-150 ease-in-out",
                     {
-                      "border-b border-text": selected,
+                      "border-b border-text": selected
                     }
                   )
                 }

@@ -11,7 +11,7 @@ const Addresses = () => {
     editAddresses: { state: isEdit, toggle: setEdit },
     setAddresses,
     handleSubmit,
-    cart,
+    cart
   } = useCheckout()
   return (
     <div className="rounded-md bg-[rgba(255,255,255,0.4)]">

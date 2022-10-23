@@ -22,11 +22,11 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm<UpdateCustomerNameFormData>({
     defaultValues: {
-      ...mapBillingAddressToFormData({ customer }),
-    },
+      ...mapBillingAddressToFormData({ customer })
+    }
   })
 
   const {
@@ -34,7 +34,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
     isLoading,
     isSuccess,
     isError,
-    reset: clearState,
+    reset: clearState
   } = useUpdateMe()
 
   const { regions } = useRegions()
@@ -45,7 +45,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
         ?.map((region) => {
           return region.countries.map((country) => ({
             value: country.iso_2,
-            label: country.display_name,
+            label: country.display_name
           }))
         })
         .flat() || []
@@ -54,7 +54,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
 
   useEffect(() => {
     reset({
-      ...mapBillingAddressToFormData({ customer }),
+      ...mapBillingAddressToFormData({ customer })
     })
   }, [customer, reset])
 
@@ -69,7 +69,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
     city,
     province,
     postalCode,
-    countryCode,
+    countryCode
   ] = useWatch({
     control,
     name: [
@@ -81,20 +81,20 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
       "billing_address.city",
       "billing_address.province",
       "billing_address.postal_code",
-      "billing_address.country_code",
-    ],
+      "billing_address.country_code"
+    ]
   })
 
   const updateBillingAddress = (data: UpdateCustomerNameFormData) => {
     return update(
       {
         id: customer.id,
-        ...data,
+        ...data
       },
       {
         onSuccess: () => {
           refetchCustomer()
-        },
+        }
       }
     )
   }
@@ -150,7 +150,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
             <Input
               label="First name"
               {...register("billing_address.first_name", {
-                required: true,
+                required: true
               })}
               defaultValue={firstName}
               errors={errors}
@@ -230,8 +230,8 @@ const mapBillingAddressToFormData = ({ customer }: MyInformationProps) => {
       city: customer.billing_address?.city || undefined,
       province: customer.billing_address?.province || undefined,
       postal_code: customer.billing_address?.postal_code || undefined,
-      country_code: customer.billing_address?.country_code || undefined,
-    },
+      country_code: customer.billing_address?.country_code || undefined
+    }
   }
 }
 

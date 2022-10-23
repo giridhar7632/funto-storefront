@@ -12,7 +12,7 @@ const BillingAddress = () => {
             <Input
               label="First name"
               {...register("billing_address.first_name", {
-                required: "First name is required",
+                required: "First name is required"
               })}
               autoComplete="given-name"
               errors={errors}
@@ -21,7 +21,7 @@ const BillingAddress = () => {
             <Input
               label="Last name"
               {...register("billing_address.last_name", {
-                required: "Last name is required",
+                required: "Last name is required"
               })}
               autoComplete="family-name"
               errors={errors}
@@ -38,7 +38,7 @@ const BillingAddress = () => {
           <Input
             label="Address"
             {...register("billing_address.address_1", {
-              required: "Address is required",
+              required: "Address is required"
             })}
             autoComplete="address-line1"
             errors={errors}
@@ -55,7 +55,7 @@ const BillingAddress = () => {
             <Input
               label="Postal code"
               {...register("billing_address.postal_code", {
-                required: "Postal code is required",
+                required: "Postal code is required"
               })}
               autoComplete="postal-code"
               errors={errors}
@@ -64,7 +64,7 @@ const BillingAddress = () => {
             <Input
               label="City"
               {...register("billing_address.city", {
-                required: "City is required",
+                required: "City is required"
               })}
               autoComplete="address-level2"
               errors={errors}
@@ -73,7 +73,7 @@ const BillingAddress = () => {
           </div>
           <CountrySelect
             {...register("billing_address.country_code", {
-              required: "Country is required",
+              required: "Country is required"
             })}
             autoComplete="country"
             errors={errors}

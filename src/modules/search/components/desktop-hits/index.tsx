@@ -22,7 +22,7 @@ const DesktopHits = ({
         className,
         {
           "max-h-[1000px] opacity-100": !!hits.length,
-          "max-h-0 opacity-0": !hits.length,
+          "max-h-0 opacity-0": !hits.length
         }
       )}
     >

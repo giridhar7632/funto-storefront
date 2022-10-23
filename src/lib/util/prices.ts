@@ -72,7 +72,7 @@ export const findCheapestPrice = (variants: Variant[], region: Region) => {
   if (cheapestPrice) {
     return formatAmount({
       amount: cheapestPrice.amount,
-      region: region,
+      region: region
     })
   }
 

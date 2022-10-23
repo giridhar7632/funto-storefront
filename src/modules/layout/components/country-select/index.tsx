@@ -23,7 +23,7 @@ const CountrySelect = () => {
         return r.countries.map((c) => ({
           country: c.iso_2,
           region: r.id,
-          label: c.display_name,
+          label: c.display_name
         }))
       })
       .flat()
@@ -60,7 +60,7 @@ const CountrySelect = () => {
                   svg
                   style={{
                     width: "16px",
-                    height: "16px",
+                    height: "16px"
                   }}
                   countryCode={current.country}
                 />
@@ -92,7 +92,7 @@ const CountrySelect = () => {
                       svg
                       style={{
                         width: "16px",
-                        height: "16px",
+                        height: "16px"
                       }}
                       countryCode={o.country}
                     />{" "}

@@ -33,7 +33,7 @@ const Collapsible: React.FC<{ label: string }> = ({ label, children }) => {
                   "overflow-hidden transition-[max-height,opacity] duration-700 ease-in-out",
                   {
                     "max-h-[300px] opacity-100": open,
-                    "max-h-0 opacity-0": !open,
+                    "max-h-0 opacity-0": !open
                   }
                 )}
               >

@@ -5,7 +5,7 @@ import {
   useCart,
   useCreateLineItem,
   useDeleteLineItem,
-  useUpdateLineItem,
+  useUpdateLineItem
 } from "medusa-react"
 import React, { useEffect, useState } from "react"
 import { useCartDropdown } from "./cart-dropdown-context"
@@ -88,7 +88,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
   const setRegion = async (regionId: string, countryCode: string) => {
     await updateCart.mutateAsync(
       {
-        region_id: regionId,
+        region_id: regionId
       },
       {
         onSuccess: ({ cart }) => {
@@ -100,7 +100,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
           if (process.env.NODE_ENV === "development") {
             console.error(error)
           }
-        },
+        }
       }
     )
   }
@@ -109,7 +109,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
     if (!IS_SERVER) {
       const { regionId, countryCode } = getRegion() || {
         regionId: region.id,
-        countryCode: region.countries[0].iso_2,
+        countryCode: region.countries[0].iso_2
       }
 
       if (regionId !== region.id) {
@@ -153,7 +153,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
           if (process.env.NODE_ENV === "development") {
             console.error(error)
           }
-        },
+        }
       }
     )
   }
@@ -165,7 +165,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
 
     createCart.mutate(
       {
-        region_id: savedRegion?.regionId,
+        region_id: savedRegion?.regionId
       },
       {
         onSuccess: ({ cart }) => {
@@ -177,7 +177,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
           if (process.env.NODE_ENV === "development") {
             console.error(error)
           }
-        },
+        }
       }
     )
   }
@@ -218,7 +218,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
 
   const addItem = ({
     variantId,
-    quantity,
+    quantity
   }: {
     variantId: string
     quantity: number
@@ -226,7 +226,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
     addLineItem.mutate(
       {
         variant_id: variantId,
-        quantity: quantity,
+        quantity: quantity
       },
       {
         onSuccess: ({ cart }) => {
@@ -236,7 +236,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
         },
         onError: (error) => {
           handleError(error)
-        },
+        }
       }
     )
   }
@@ -244,7 +244,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
   const deleteItem = (lineId: string) => {
     removeLineItem.mutate(
       {
-        lineId,
+        lineId
       },
       {
         onSuccess: ({ cart }) => {
@@ -253,14 +253,14 @@ export const StoreProvider = ({ children }: StoreProps) => {
         },
         onError: (error) => {
           handleError(error)
-        },
+        }
       }
     )
   }
 
   const updateItem = ({
     lineId,
-    quantity,
+    quantity
   }: {
     lineId: string
     quantity: number
@@ -268,7 +268,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
     adjustLineItem.mutate(
       {
         lineId,
-        quantity,
+        quantity
       },
       {
         onSuccess: ({ cart }) => {
@@ -277,7 +277,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
         },
         onError: (error) => {
           handleError(error)
-        },
+        }
       }
     )
   }
@@ -290,7 +290,7 @@ export const StoreProvider = ({ children }: StoreProps) => {
         addItem,
         deleteItem,
         updateItem,
-        resetCart,
+        resetCart
       }}
     >
       {children}

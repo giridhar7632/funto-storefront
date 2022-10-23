@@ -31,14 +31,14 @@ const fetchCollectionData = async (): Promise<LayoutCollection[]> => {
 
   return collections.map((c) => ({
     id: c.id,
-    title: c.title,
+    title: c.title
   }))
 }
 
 export const useNavigationCollections = () => {
   const queryResults = useQuery("navigation_collections", fetchCollectionData, {
     staleTime: Infinity,
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: false
   })
 
   return queryResults
@@ -52,7 +52,7 @@ const fetchFeaturedProducts = async (
     .list({
       is_giftcard: false,
       limit: 4,
-      cart_id: cartId,
+      cart_id: cartId
     })
     .then(({ products }) => products)
     .catch((_) => [] as Product[])
@@ -76,19 +76,19 @@ const fetchFeaturedProducts = async (
         calculated_price: formatAmount({
           amount: cheapestVariant.calculated_price,
           region: region,
-          includeTaxes: false,
+          includeTaxes: false
         }),
         original_price: formatAmount({
           amount: cheapestVariant.original_price,
           region: region,
-          includeTaxes: false,
+          includeTaxes: false
         }),
         difference: getPercentageDiff(
           cheapestVariant.original_price,
           cheapestVariant.calculated_price
         ),
-        price_type: cheapestVariant.calculated_price_type,
-      },
+        price_type: cheapestVariant.calculated_price_type
+      }
     }
   })
 }
@@ -102,7 +102,7 @@ export const useFeaturedProductsQuery = () => {
     {
       enabled: !!cart?.id && !!cart?.region,
       staleTime: Infinity,
-      refetchOnWindowFocus: false,
+      refetchOnWindowFocus: false
     }
   )
 

@@ -1,7 +1,7 @@
 import X from "@modules/common/icons/x"
 import { FormEvent } from "react"
 import SearchBoxWrapper, {
-  ControlledSearchBoxProps,
+  ControlledSearchBoxProps
 } from "../search-box-wrapper"
 
 const ControlledSearchBox = ({

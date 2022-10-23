@@ -13,7 +13,7 @@ type ThumbnailProps = {
 const Thumbnail: React.FC<ThumbnailProps> = ({
   thumbnail,
   images,
-  size = "small",
+  size = "small"
 }) => {
   const initialImage = thumbnail || images?.[0]?.url
 
@@ -23,7 +23,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
         "w-[180px]": size === "small",
         "w-[290px]": size === "medium",
         "w-[440px]": size === "large",
-        "w-full": size === "full",
+        "w-full": size === "full"
       })}
     >
       <ImageOrPlaceholder image={initialImage} size={size} />
@@ -33,7 +33,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
 
 const ImageOrPlaceholder = ({
   image,
-  size,
+  size
 }: Pick<ThumbnailProps, "size"> & { image?: string }) => {
   return image ? (
     <Image

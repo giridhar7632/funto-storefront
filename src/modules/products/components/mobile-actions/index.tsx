@@ -32,7 +32,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({ product, show }) => {
     <>
       <div
         className={clsx("sticky inset-x-0 bottom-0 lg:hidden", {
-          "pointer-events-none": !show,
+          "pointer-events-none": !show
         })}
       >
         <Transition
@@ -60,7 +60,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({ product, show }) => {
                   )}
                   <span
                     className={clsx({
-                      "text-rose-600": selectedPrice.price_type === "sale",
+                      "text-rose-600": selectedPrice.price_type === "sale"
                     })}
                   >
                     {selectedPrice.calculated_price}

@@ -7,7 +7,7 @@ import {
   useEffect,
   useImperativeHandle,
   useRef,
-  useState,
+  useState
 } from "react"
 import { get } from "react-hook-form"
 
@@ -58,7 +58,7 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
             "text-base-regular relative flex items-center rounded border border-textBtn",
             className,
             {
-              "text-textLight": isPlaceholder,
+              "text-textLight": isPlaceholder
             }
           )}
         >

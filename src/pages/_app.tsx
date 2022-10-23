@@ -10,7 +10,7 @@ import { AppPropsWithLayout } from "types/global"
 
 function App({
   Component,
-  pageProps,
+  pageProps
 }: AppPropsWithLayout<{ dehydratedState?: unknown }>) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
@@ -18,7 +18,7 @@ function App({
     <MedusaProvider
       baseUrl={MEDUSA_BACKEND_URL}
       queryClientProviderProps={{
-        client: queryClient,
+        client: queryClient
       }}
     >
       <Hydrate state={pageProps.dehydratedState}>

@@ -20,11 +20,11 @@ const ProfilePhone: React.FC<MyInformationProps> = ({ customer }) => {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm<UpdateCustomerPhoneFormData>({
     defaultValues: {
-      phone: customer.phone,
-    },
+      phone: customer.phone
+    }
   })
 
   const { refetchCustomer } = useAccount()
@@ -34,30 +34,30 @@ const ProfilePhone: React.FC<MyInformationProps> = ({ customer }) => {
     isLoading,
     isSuccess,
     isError,
-    reset: clearState,
+    reset: clearState
   } = useUpdateMe()
 
   useEffect(() => {
     reset({
-      phone: customer.phone,
+      phone: customer.phone
     })
   }, [customer, reset])
 
   const phone = useWatch({
     control,
-    name: "phone",
+    name: "phone"
   })
 
   const updatePhone = (data: UpdateCustomerPhoneFormData) => {
     return update(
       {
         id: customer.id,
-        ...data,
+        ...data
       },
       {
         onSuccess: () => {
           refetchCustomer()
-        },
+        }
       }
     )
   }
@@ -76,7 +76,7 @@ const ProfilePhone: React.FC<MyInformationProps> = ({ customer }) => {
           <Input
             label="Phone"
             {...register("phone", {
-              required: true,
+              required: true
             })}
             defaultValue={phone}
             errors={errors}

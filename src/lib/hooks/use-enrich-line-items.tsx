@@ -15,19 +15,19 @@ const useEnrichedLineItems = (lineItems?: LineItem[], cartId?: string) => {
     if (lineItems) {
       return {
         id: lineItems.map((lineItem) => lineItem.variant.product_id),
-        cart_id: cartId,
+        cart_id: cartId
       }
     }
 
     return {
       id: cart?.items.map((lineItem) => lineItem.variant.product_id),
-      cart_id: cart?.id,
+      cart_id: cart?.id
     }
   }, [lineItems, cart?.items, cart?.id, cartId])
 
   const { products } = useProducts(queryParams, {
     enabled: !!lineItems || !!cart?.items?.length,
-    keepPreviousData: true,
+    keepPreviousData: true
   })
 
   // We enrich the line items with the product and variant information
@@ -61,8 +61,8 @@ const useEnrichedLineItems = (lineItems?: LineItem[], cartId?: string) => {
         variant: {
           ...variant,
           // @ts-ignore
-          product: omit(product, "variants"),
-        },
+          product: omit(product, "variants")
+        }
       })
     }
 

@@ -17,7 +17,7 @@ type CollectionTemplateProps = {
 }
 
 const CollectionTemplate: React.FC<CollectionTemplateProps> = ({
-  collection,
+  collection
 }) => {
   const { cart } = useCart()
   const { ref, inView } = useInView()
@@ -27,23 +27,23 @@ const CollectionTemplate: React.FC<CollectionTemplateProps> = ({
     hasNextPage,
     fetchNextPage,
     isFetchingNextPage,
-    isLoading,
+    isLoading
   } = useInfiniteQuery(
     [`get_collection_products`, collection.id, cart?.id],
     ({ pageParam }) =>
       fetchCollectionProducts({
         pageParam,
         id: collection.id,
-        cartId: cart?.id,
+        cartId: cart?.id
       }),
     {
-      getNextPageParam: (lastPage) => lastPage.nextPage,
+      getNextPageParam: (lastPage) => lastPage.nextPage
     }
   )
 
   const previews = usePreviews({
     pages: infiniteData?.pages,
-    region: cart?.region,
+    region: cart?.region
   })
 
   useEffect(() => {

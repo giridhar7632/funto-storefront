@@ -8,7 +8,7 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useState,
+  useState
 } from "react"
 
 type ScreenType = "main" | "country" | "search"
@@ -24,7 +24,7 @@ interface MobileMenuContext {
 export const MobileMenuContext = createContext<MobileMenuContext | null>(null)
 
 export const MobileMenuProvider = ({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) => {
@@ -58,7 +58,7 @@ export const MobileMenuProvider = ({
         close: closeMenu,
         open,
         toggle,
-        screen: [screen, setScreen],
+        screen: [screen, setScreen]
       }}
     >
       {children}

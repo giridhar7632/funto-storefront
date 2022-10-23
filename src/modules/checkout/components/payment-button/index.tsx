@@ -60,7 +60,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ paymentSession }) => {
 
 const StripePaymentButton = ({
   session,
-  notReady,
+  notReady
 }: {
   session: PaymentSession
   notReady: boolean
@@ -109,12 +109,12 @@ const StripePaymentButton = ({
               line1: cart.billing_address.address_1 ?? undefined,
               line2: cart.billing_address.address_2 ?? undefined,
               postal_code: cart.billing_address.postal_code ?? undefined,
-              state: cart.billing_address.province ?? undefined,
+              state: cart.billing_address.province ?? undefined
             },
             email: cart.email,
-            phone: cart.billing_address.phone ?? undefined,
-          },
-        },
+            phone: cart.billing_address.phone ?? undefined
+          }
+        }
       })
       .then(({ error, paymentIntent }) => {
         if (error) {
@@ -166,7 +166,7 @@ const PAYPAL_CLIENT_ID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || ""
 
 const PayPalPaymentButton = ({
   session,
-  notReady,
+  notReady
 }: {
   session: PaymentSession
   notReady: boolean
@@ -204,7 +204,7 @@ const PayPalPaymentButton = ({
       options={{
         "client-id": PAYPAL_CLIENT_ID,
         currency: cart?.region.currency_code.toUpperCase(),
-        intent: "authorize",
+        intent: "authorize"
       }}
     >
       {errorMessage && (

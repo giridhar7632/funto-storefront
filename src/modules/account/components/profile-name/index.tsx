@@ -21,12 +21,12 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm<UpdateCustomerNameFormData>({
     defaultValues: {
       first_name: customer.first_name,
-      last_name: customer.last_name,
-    },
+      last_name: customer.last_name
+    }
   })
 
   const { refetchCustomer } = useAccount()
@@ -36,35 +36,35 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     isLoading,
     isSuccess,
     isError,
-    reset: clearState,
+    reset: clearState
   } = useUpdateMe()
 
   useEffect(() => {
     reset({
       first_name: customer.first_name,
-      last_name: customer.last_name,
+      last_name: customer.last_name
     })
   }, [customer, reset])
 
   const firstName = useWatch({
     control,
-    name: "first_name",
+    name: "first_name"
   })
   const lastName = useWatch({
     control,
-    name: "last_name",
+    name: "last_name"
   })
 
   const updateName = (data: UpdateCustomerNameFormData) => {
     return update(
       {
         id: customer.id,
-        ...data,
+        ...data
       },
       {
         onSuccess: () => {
           refetchCustomer()
-        },
+        }
       }
     )
   }
@@ -83,7 +83,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
           <Input
             label="First name"
             {...register("first_name", {
-              required: true,
+              required: true
             })}
             defaultValue={firstName}
             errors={errors}

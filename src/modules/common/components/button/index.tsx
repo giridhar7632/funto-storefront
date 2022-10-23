@@ -23,7 +23,7 @@ const Button = ({
         "flex min-h-[50px] w-full items-center justify-center rounded-xl border px-5 py-[10px] font-btn font-medium text-white transition-colors duration-200 disabled:bg-textLight disabled:opacity-50",
         {
           "border-brown bg-brown hover:shadow-md": variant === "primary",
-          "border-gray-920 bg-text hover:shadow-md": variant === "secondary",
+          "border-gray-920 bg-text hover:shadow-md": variant === "secondary"
         },
         className
       )}

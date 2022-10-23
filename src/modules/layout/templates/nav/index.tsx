@@ -43,14 +43,14 @@ const Nav = () => {
   return (
     <div
       className={clsx("group sticky inset-x-0 top-0 z-50", {
-        "!fixed": isHome,
+        "!fixed": isHome
       })}
     >
       <header
         className={clsx(
           "relative mx-auto h-16 border-b border-transparent bg-transparent px-8 transition-colors duration-200 group-hover:border-textBtn group-hover:bg-bgLight",
           {
-            "!bg-bgLight": !isHome || isScrolled,
+            "!bg-bgLight": !isHome || isScrolled
           }
         )}
       >
@@ -58,7 +58,7 @@ const Nav = () => {
           className={clsx(
             "text-regular flex h-full w-full items-center justify-between transition-colors duration-200",
             {
-              "text-white group-hover:text-text": isHome && !isScrolled,
+              "text-white group-hover:text-text": isHome && !isScrolled
             }
           )}
         >
@@ -67,7 +67,7 @@ const Nav = () => {
               <a>
                 <Logo
                   className={clsx("", {
-                    "text-brown": isScrolled,
+                    "text-brown": isScrolled
                   })}
                   label="Funto"
                 />

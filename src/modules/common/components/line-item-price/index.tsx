@@ -15,7 +15,7 @@ const LineItemPrice = ({
   variant,
   region,
   quantity,
-  style = "default",
+  style = "default"
 }: LineItemPriceProps) => {
   const hasReducedPrice = variant.calculated_price < variant.original_price
 
@@ -23,13 +23,13 @@ const LineItemPrice = ({
     <div className="flex flex-col text-right font-serif text-textLight">
       <span
         className={clsx("font-serif text-base font-medium", {
-          "text-rose-600": hasReducedPrice,
+          "text-rose-600": hasReducedPrice
         })}
       >
         {formatAmount({
           amount: variant.calculated_price * quantity,
           region: region,
-          includeTaxes: false,
+          includeTaxes: false
         })}
       </span>
       {hasReducedPrice && (
@@ -42,7 +42,7 @@ const LineItemPrice = ({
               {formatAmount({
                 amount: variant.original_price * quantity,
                 region: region,
-                includeTaxes: false,
+                includeTaxes: false
               })}
             </span>
           </p>

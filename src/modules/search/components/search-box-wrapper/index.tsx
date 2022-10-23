@@ -4,7 +4,7 @@ import {
   RefObject,
   useEffect,
   useRef,
-  useState,
+  useState
 } from "react"
 import { useSearchBox, UseSearchBoxProps } from "react-instantsearch-hooks-web"
 
@@ -77,7 +77,7 @@ const SearchBoxWrapper = ({
     isSearchStalled,
     onChange,
     onReset,
-    placeholder,
+    placeholder
   }
 
   return children(state) as React.ReactElement

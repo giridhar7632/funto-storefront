@@ -10,7 +10,7 @@ interface ConnectFormProps<TFieldValues extends FieldValues> {
  * Utility component for nested forms.
  */
 const ConnectForm = <TFieldValues extends FieldValues>({
-  children,
+  children
 }: ConnectFormProps<TFieldValues>) => {
   const methods = useFormContext<TFieldValues>()
 

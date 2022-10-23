@@ -17,14 +17,14 @@ type GiftCardProps = {
 const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
   const {
     updateCart: { mutate, isLoading },
-    setCart,
+    setCart
   } = useCart()
 
   const {
     register,
     handleSubmit,
     formState: { touchedFields, errors },
-    setError,
+    setError
   } = useForm<GiftCardFormValues>()
 
   const appliedGiftCard = useMemo(() => {
@@ -38,7 +38,7 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
   const onSubmit = (data: GiftCardFormValues) => {
     mutate(
       {
-        gift_cards: [{ code: data.gift_card_code }],
+        gift_cards: [{ code: data.gift_card_code }]
       },
       {
         onSuccess: ({ cart }) => setCart(cart),
@@ -46,13 +46,13 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
           setError(
             "gift_card_code",
             {
-              message: "Code is invalid",
+              message: "Code is invalid"
             },
             {
-              shouldFocus: true,
+              shouldFocus: true
             }
           )
-        },
+        }
       }
     )
   }
@@ -60,10 +60,10 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
   const onRemove = () => {
     mutate(
       {
-        gift_cards: [],
+        gift_cards: []
       },
       {
-        onSuccess: ({ cart }) => setCart(cart),
+        onSuccess: ({ cart }) => setCart(cart)
       }
     )
   }
@@ -97,7 +97,7 @@ const GiftCard: React.FC<GiftCardProps> = ({ cart }) => {
               <Input
                 label="Code"
                 {...register("gift_card_code", {
-                  required: "Code is required",
+                  required: "Code is required"
                 })}
                 errors={errors}
                 touched={touchedFields}

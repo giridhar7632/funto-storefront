@@ -7,7 +7,7 @@ import { useMutation } from "react-query"
 
 export enum LOGIN_VIEW {
   SIGN_IN = "sign-in",
-  REGISTER = "register",
+  REGISTER = "register"
 }
 
 interface AccountContext {
@@ -34,7 +34,7 @@ export const AccountProvider = ({ children }: AccountProviderProps) => {
     customer,
     isLoading: retrievingCustomer,
     refetch,
-    remove,
+    remove
   } = useMeCustomer({ onError: () => {} })
   const loginView = useState<LOGIN_VIEW>(LOGIN_VIEW.SIGN_IN)
 
@@ -54,7 +54,7 @@ export const AccountProvider = ({ children }: AccountProviderProps) => {
         remove()
         loginView[1](LOGIN_VIEW.SIGN_IN)
         router.push("/")
-      },
+      }
     })
   }
 
@@ -66,7 +66,7 @@ export const AccountProvider = ({ children }: AccountProviderProps) => {
         loginView,
         checkSession,
         refetchCustomer: refetch,
-        handleLogout,
+        handleLogout
       }}
     >
       {children}

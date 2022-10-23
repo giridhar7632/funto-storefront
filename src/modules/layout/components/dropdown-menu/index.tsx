@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react"
 import {
   useFeaturedProductsQuery,
-  useNavigationCollections,
+  useNavigationCollections
 } from "@lib/hooks/use-layout-data"
 import repeat from "@lib/util/repeat"
 import ProductPreview from "@modules/products/components/product-preview"

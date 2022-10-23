@@ -24,11 +24,11 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm<UpdateCustomerEmailFormData>({
     defaultValues: {
-      email: customer.email,
-    },
+      email: customer.email
+    }
   })
 
   const { refetchCustomer } = useAccount()
@@ -38,25 +38,25 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
     isLoading,
     isSuccess,
     isError,
-    reset: clearState,
+    reset: clearState
   } = useUpdateMe()
 
   useEffect(() => {
     reset({
-      email: customer.email,
+      email: customer.email
     })
   }, [customer, reset])
 
   const email = useWatch({
     control,
-    name: "email",
+    name: "email"
   })
 
   const updateEmail = (data: UpdateCustomerEmailFormData) => {
     return update(
       {
         id: customer.id,
-        ...data,
+        ...data
       },
       {
         onSuccess: () => {
@@ -64,7 +64,7 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
         },
         onError: () => {
           setErrorMessage("Email already in use")
-        },
+        }
       }
     )
   }
@@ -84,7 +84,7 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
           <Input
             label="Email"
             {...register("email", {
-              required: true,
+              required: true
             })}
             defaultValue={email}
             errors={errors}

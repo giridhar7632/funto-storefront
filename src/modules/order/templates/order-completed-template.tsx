@@ -12,7 +12,7 @@ type OrderCompletedTemplateProps = {
 }
 
 const OrderCompletedTemplate: React.FC<OrderCompletedTemplateProps> = ({
-  order,
+  order
 }) => {
   return (
     <div className="min-h-[calc(100vh-64px)] bg-bgLight py-6">

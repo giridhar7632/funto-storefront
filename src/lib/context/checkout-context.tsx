@@ -4,7 +4,7 @@ import {
   Address,
   Cart,
   Customer,
-  StorePostCartsCartReq,
+  StorePostCartsCartReq
 } from "@medusajs/medusa"
 import Wrapper from "@modules/checkout/components/payment-wrapper"
 import { isEqual } from "lodash"
@@ -15,7 +15,7 @@ import {
   useMeCustomer,
   useRegions,
   useSetPaymentSession,
-  useUpdateCart,
+  useUpdateCart
 } from "medusa-react"
 import { useRouter } from "next/router"
 import React, { createContext, useContext, useEffect, useMemo } from "react"
@@ -70,9 +70,9 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
     setCart,
     addShippingMethod: {
       mutate: setShippingMethod,
-      isLoading: addingShippingMethod,
+      isLoading: addingShippingMethod
     },
-    completeCheckout: { mutate: complete, isLoading: completingCheckout },
+    completeCheckout: { mutate: complete, isLoading: completingCheckout }
   } = useCart()
 
   const { customer } = useMeCustomer()
@@ -80,12 +80,12 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
 
   const methods = useForm<CheckoutFormValues>({
     defaultValues: mapFormValues(customer, cart, countryCode),
-    reValidateMode: "onChange",
+    reValidateMode: "onChange"
   })
 
   const {
     mutate: setPaymentSessionMutation,
-    isLoading: settingPaymentSession,
+    isLoading: settingPaymentSession
   } = useSetPaymentSession(cart?.id!)
 
   const { mutate: updateCart, isLoading: updatingCart } = useUpdateCart(
@@ -93,7 +93,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   )
 
   const { shipping_options } = useCartShippingOptions(cart?.id!, {
-    enabled: !!cart?.id,
+    enabled: !!cart?.id
   })
 
   const { regions } = useRegions()
@@ -122,7 +122,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
     addingShippingMethod,
     completingCheckout,
     settingPaymentSession,
-    updatingCart,
+    updatingCart
   ])
 
   /**
@@ -147,8 +147,8 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
         label: option.name,
         price: formatAmount({
           amount: option.amount || 0,
-          region: cart.region,
-        }),
+          region: cart.region
+        })
       }))
     }
 
@@ -187,7 +187,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       setShippingMethod(
         { option_id: soId },
         {
-          onSuccess: ({ cart }) => setCart(cart),
+          onSuccess: ({ cart }) => setCart(cart)
         }
       )
     }
@@ -199,7 +199,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   const createPaymentSession = async (cartId: string) => {
     return medusaClient.carts
       .createPaymentSessions(cartId, {
-        "Idempotency-Key": IDEMPOTENCY_KEY,
+        "Idempotency-Key": IDEMPOTENCY_KEY
       })
       .then(({ cart }) => cart)
       .catch(() => null)
@@ -228,12 +228,12 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
     if (cart) {
       setPaymentSessionMutation(
         {
-          provider_id: providerId,
+          provider_id: providerId
         },
         {
           onSuccess: ({ cart }) => {
             setCart(cart)
-          },
+          }
         }
       )
     }
@@ -260,7 +260,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       phone: address.phone || "",
       postal_code: address.postal_code || "",
       province: address.province || "",
-      company: address.company || "",
+      company: address.company || ""
     })
   }
 
@@ -287,7 +287,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
 
     const payload: StorePostCartsCartReq = {
       shipping_address,
-      email,
+      email
     }
 
     if (isEqual(shipping_address, billing_address)) {
@@ -304,7 +304,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       onSuccess: ({ cart }) => {
         setCart(cart)
         prepareFinalSteps()
-      },
+      }
     })
   }
 
@@ -316,7 +316,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
       onSuccess: ({ data }) => {
         resetCart()
         push(`/order/confirmed/${data.id}`)
-      },
+      }
     })
   }
 
@@ -335,7 +335,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
           setSavedAddress,
           setShippingOption,
           setPaymentSession,
-          onPaymentCompleted,
+          onPaymentCompleted
         }}
       >
         <Wrapper paymentSession={cart?.payment_session}>{children}</Wrapper>
@@ -406,7 +406,7 @@ const mapFormValues = (
         customerShippingAddress?.postal_code ||
         "",
       phone:
-        cart?.shipping_address?.phone || customerShippingAddress?.phone || "",
+        cart?.shipping_address?.phone || customerShippingAddress?.phone || ""
     },
     billing_address: {
       first_name:
@@ -440,9 +440,8 @@ const mapFormValues = (
         cart?.billing_address?.postal_code ||
         customerBillingAddress?.postal_code ||
         "",
-      phone:
-        cart?.billing_address?.phone || customerBillingAddress?.phone || "",
+      phone: cart?.billing_address?.phone || customerBillingAddress?.phone || ""
     },
-    email: cart?.email || customer?.email || "",
+    email: cart?.email || customer?.email || ""
   }
 }

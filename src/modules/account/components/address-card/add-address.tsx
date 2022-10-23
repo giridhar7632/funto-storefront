@@ -33,7 +33,7 @@ const AddAddress: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm<FormValues>()
 
   const handleClose = () => {
@@ -47,7 +47,7 @@ const AddAddress: React.FC = () => {
       address_2: "",
       company: "",
       phone: "",
-      province: "",
+      province: ""
     })
     close()
   }
@@ -67,7 +67,7 @@ const AddAddress: React.FC = () => {
       province: data.province || "",
       postal_code: data.postal_code,
       phone: data.phone || "",
-      metadata: {},
+      metadata: {}
     }
 
     medusaClient.customers.addresses
@@ -101,7 +101,7 @@ const AddAddress: React.FC = () => {
               <Input
                 label="First name"
                 {...register("first_name", {
-                  required: "First name is required",
+                  required: "First name is required"
                 })}
                 required
                 errors={errors}
@@ -110,7 +110,7 @@ const AddAddress: React.FC = () => {
               <Input
                 label="Last name"
                 {...register("last_name", {
-                  required: "Last name is required",
+                  required: "Last name is required"
                 })}
                 required
                 errors={errors}
@@ -121,7 +121,7 @@ const AddAddress: React.FC = () => {
             <Input
               label="Address"
               {...register("address_1", {
-                required: "Address is required",
+                required: "Address is required"
               })}
               required
               errors={errors}
@@ -137,7 +137,7 @@ const AddAddress: React.FC = () => {
               <Input
                 label="Postal code"
                 {...register("postal_code", {
-                  required: "Postal code is required",
+                  required: "Postal code is required"
                 })}
                 required
                 errors={errors}
@@ -146,7 +146,7 @@ const AddAddress: React.FC = () => {
               <Input
                 label="City"
                 {...register("city", {
-                  required: "City is required",
+                  required: "City is required"
                 })}
                 errors={errors}
                 required

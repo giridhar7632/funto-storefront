@@ -14,7 +14,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
   option,
   current,
   updateOption,
-  title,
+  title
 }) => {
   const filteredOptions = option.values.map((v) => v.value).filter(onlyUnique)
 

@@ -25,7 +25,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     handleSubmit,
     reset,
     formState: { errors },
-    setError,
+    setError
   } = useForm<UpdateCustomerPasswordFormData>()
 
   const {
@@ -33,7 +33,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     isLoading,
     isSuccess,
     isError,
-    reset: clearState,
+    reset: clearState
   } = useUpdateMe()
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     const isValid = await medusaClient.auth
       .authenticate({
         email: customer.email,
-        password: data.old_password,
+        password: data.old_password
       })
       .then(() => true)
       .catch(() => false)
@@ -52,7 +52,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     if (!isValid) {
       setError("old_password", {
         type: "validate",
-        message: "Old password is incorrect",
+        message: "Old password is incorrect"
       })
       setErrorMessage("Old password is incorrect")
 
@@ -62,7 +62,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     if (data.new_password !== data.confirm_password) {
       setError("confirm_password", {
         type: "validate",
-        message: "Passwords do not match",
+        message: "Passwords do not match"
       })
       setErrorMessage("Passwords do not match")
 
@@ -71,7 +71,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
 
     return update({
       id: customer.id,
-      password: data.new_password,
+      password: data.new_password
     })
   }
 
@@ -96,7 +96,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
           <Input
             label="Old password"
             {...register("old_password", {
-              required: true,
+              required: true
             })}
             type="password"
             errors={errors}

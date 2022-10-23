@@ -7,7 +7,7 @@ const ProductPreview = ({
   title,
   handle,
   thumbnail,
-  price,
+  price
 }: ProductPreviewType) => {
   return (
     <Link href={`/products/${handle}`}>
@@ -26,7 +26,7 @@ const ProductPreview = ({
                   )}
                   <span
                     className={clsx("font-semibold", {
-                      "text-rose-500": price.price_type === "sale",
+                      "text-rose-500": price.price_type === "sale"
                     })}
                   >
                     {price.calculated_price}

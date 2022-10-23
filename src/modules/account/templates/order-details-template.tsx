@@ -8,7 +8,7 @@ const OrderDetailsTemplate = () => {
   const { order } = router.query
 
   const { order: details, isLoading } = useOrder(order as string, {
-    enabled: !!order,
+    enabled: !!order
   })
 
   if (isLoading || !details) {

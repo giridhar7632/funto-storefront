@@ -1,4 +1,4 @@
-function withStoreConfig(nextConfig = {}) {
+const withStoreConfig = (nextConfig = {}) => {
   const features = nextConfig.features || {}
   delete nextConfig.features
 

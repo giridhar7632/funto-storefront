@@ -21,7 +21,7 @@ const Meta: FC<MetaProps> = ({
   image = `/og-image`,
   url = process.env.NEXT_PUBLIC_URL,
   keywords = "ecommerce,furnitures,medusa,royal,elegant",
-  children,
+  children
 }) => (
   <NextHead>
     <meta name="keywords" content={keywords} />

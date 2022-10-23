@@ -29,16 +29,16 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
   const {
     control,
     setError,
-    formState: { errors },
+    formState: { errors }
   } = useForm<ShippingFormProps>({
     defaultValues: {
-      soId: cart.shipping_methods?.[0]?.shipping_option_id,
-    },
+      soId: cart.shipping_methods?.[0]?.shipping_option_id
+    }
   })
 
   // Fetch shipping options
   const { shipping_options, refetch } = useCartShippingOptions(cart.id, {
-    enabled: !!cart.id,
+    enabled: !!cart.id
   })
 
   // Any time the cart changes we need to ensure that we are displaying valid shipping options
@@ -61,10 +61,10 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
             {
               type: "validate",
               message:
-                "An error occurred while adding shipping. Please try again.",
+                "An error occurred while adding shipping. Please try again."
             },
             { shouldFocus: true }
-          ),
+          )
       }
     )
   }
@@ -82,8 +82,8 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
         label: option.name,
         price: formatAmount({
           amount: option.amount || 0,
-          region: cart.region,
-        }),
+          region: cart.region
+        })
       }))
     }
 
@@ -91,7 +91,7 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
   }, [shipping_options, cart])
 
   const {
-    sameAsBilling: { state: sameBilling },
+    sameAsBilling: { state: sameBilling }
   } = useCheckout()
 
   return (
@@ -123,7 +123,7 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
                         className={clsx(
                           "text-small-regular flex cursor-pointer items-center justify-between border-b border-gray-200 py-4 px-8 last:border-b-0",
                           {
-                            "bg-bgLight": option.value === value,
+                            "bg-bgLight": option.value === value
                           }
                         )}
                       >

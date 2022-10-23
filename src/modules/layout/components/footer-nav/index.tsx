@@ -22,7 +22,7 @@ const FooterNav = () => {
             <span className="text-base-semi">Collections</span>
             <ul
               className={clsx("grid grid-cols-1 gap-y-2", {
-                "grid-cols-2": (collections?.length || 0) > 4,
+                "grid-cols-2": (collections?.length || 0) > 4
               })}
             >
               {collections?.map((c) => (

@@ -9,7 +9,7 @@ type CheckboxProps = {
 const Checkbox: React.FC<CheckboxProps> = ({
   checked = false,
   onChange,
-  label,
+  label
 }) => {
   return (
     <button

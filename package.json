@@ -15,7 +15,7 @@
     "start": "next start -p 8000",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build",
-    "format": "prettier **/*.{js,ts,tsx} --write"
+    "format": "prettier **/*.{js,json,ts,tsx} --write"
   },
   "resolutions": {
     "webpack": "^5",

@@ -13,7 +13,7 @@ export const CartDropdownContext = createContext<CartDropdownContext | null>(
 )
 
 export const CartDropdownProvider = ({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) => {

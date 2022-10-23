@@ -12,7 +12,7 @@ type OrderDetailsTemplateProps = {
 }
 
 const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
-  order,
+  order
 }) => {
   return (
     <div className="min-h-[calc(100vh-64px)] bg-bgLight py-6">

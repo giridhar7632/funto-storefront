@@ -33,7 +33,7 @@ type EditAddressProps = {
 
 const EditAddress: React.FC<EditAddressProps> = ({
   address,
-  isActive = false,
+  isActive = false
 }) => {
   const { state, open, close } = useToggleState(false)
   const [submitting, setSubmitting] = useState(false)
@@ -43,7 +43,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormValues>({
     defaultValues: {
       first_name: address.first_name || undefined,
@@ -55,8 +55,8 @@ const EditAddress: React.FC<EditAddressProps> = ({
       postal_code: address.postal_code || undefined,
       phone: address.phone || undefined,
       company: address.company || undefined,
-      province: address.province || undefined,
-    },
+      province: address.province || undefined
+    }
   })
 
   const submit = handleSubmit(async (data: FormValues) => {
@@ -74,7 +74,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
       province: data.province || "",
       postal_code: data.postal_code,
       phone: data.phone || "None",
-      metadata: {},
+      metadata: {}
     }
 
     medusaClient.customers.addresses
@@ -102,7 +102,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
         className={clsx(
           "flex h-full min-h-[220px] w-full flex-col justify-between border border-gray-200 p-5 transition-colors",
           {
-            "border-text": isActive,
+            "border-text": isActive
           }
         )}
       >
@@ -155,7 +155,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="First name"
                 {...register("first_name", {
-                  required: "First name is required",
+                  required: "First name is required"
                 })}
                 required
                 errors={errors}
@@ -164,7 +164,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="Last name"
                 {...register("last_name", {
-                  required: "Last name is required",
+                  required: "Last name is required"
                 })}
                 required
                 errors={errors}
@@ -175,7 +175,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             <Input
               label="Address"
               {...register("address_1", {
-                required: "Address is required",
+                required: "Address is required"
               })}
               required
               errors={errors}
@@ -191,7 +191,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="Postal code"
                 {...register("postal_code", {
-                  required: "Postal code is required",
+                  required: "Postal code is required"
                 })}
                 required
                 errors={errors}
@@ -200,7 +200,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               <Input
                 label="City"
                 {...register("city", {
-                  required: "City is required",
+                  required: "City is required"
                 })}
                 errors={errors}
                 required

@@ -31,12 +31,12 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    reset
   } = useForm<FormValues>({
     defaultValues: {
       new_password: undefined,
-      old_password: undefined,
-    },
+      old_password: undefined
+    }
   })
 
   const { refetchCustomer } = useAccount()
@@ -74,14 +74,14 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
           refetchCustomer()
           reset({
             new_password: undefined,
-            old_password: undefined,
+            old_password: undefined
           })
           close()
         },
         onError: () => {
           setSubmitting(false)
           setError("Unable to update password, try again later.")
-        },
+        }
       }
     )
   })
@@ -96,7 +96,7 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
             <Input
               label="Old password"
               {...register("old_password", {
-                required: "Old password is required",
+                required: "Old password is required"
               })}
               type="password"
               autoComplete="password"
@@ -105,7 +105,7 @@ const EditPasswordModal: React.FC<EditPasswordModalProps> = ({ customer }) => {
             <Input
               label="New password"
               {...register("new_password", {
-                required: "New password is required",
+                required: "New password is required"
               })}
               type="password"
               autoComplete="new_password"

@@ -8,7 +8,7 @@ import ReactCountryFlag from "react-country-flag"
 const CountryMenu = () => {
   const {
     close,
-    screen: [_, setScreen],
+    screen: [_, setScreen]
   } = useMobileMenu()
 
   const { setRegion } = useStore()

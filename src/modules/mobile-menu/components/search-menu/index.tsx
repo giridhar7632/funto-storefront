@@ -8,7 +8,7 @@ import { InstantSearch } from "react-instantsearch-hooks-web"
 
 const SearchMenu = () => {
   const {
-    screen: [_, setScreen],
+    screen: [_, setScreen]
   } = useMobileMenu()
 
   return (

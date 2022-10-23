@@ -46,7 +46,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
       [`infinite-products-${product.id}`, queryParams, cart],
       ({ pageParam }) => fetchProductsList({ pageParam, queryParams }),
       {
-        getNextPageParam: (lastPage) => lastPage.nextPage,
+        getNextPageParam: (lastPage) => lastPage.nextPage
       }
     )
 
