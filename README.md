@@ -23,6 +23,10 @@ An elegant simple furnitures store built using <a href="https://github.com/medus
 
 An open source ecommerce web application built using Medusa and Next.js. It includes products, collections, cart, checkout and payment.
 
+## Preview
+
+![Demo](https://raw.githubusercontent.com/giridhar7632/funto-storefront/main/public/screenshot.png)
+
 ## Tech Stack
 
 This project was bootstrapped using [Medusa Next.js Starter](https://github.com/medusajs/nextjs-starter-medusa) template.
