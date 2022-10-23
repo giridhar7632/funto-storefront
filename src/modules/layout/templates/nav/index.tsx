@@ -48,15 +48,15 @@ const Nav = () => {
     >
       <header
         className={clsx(
-          "relative mx-auto h-16 border-b border-transparent bg-transparent px-8 transition-colors duration-200 group-hover:border-gray-200 group-hover:bg-white",
+          "relative mx-auto h-16 border-b border-transparent bg-transparent px-8 transition-colors duration-200 group-hover:border-textBtn group-hover:bg-bgLight",
           {
-            "!border-gray-200 !bg-white": !isHome || isScrolled,
+            "!bg-bgLight": !isHome || isScrolled,
           }
         )}
       >
         <nav
           className={clsx(
-            "text-small-regular flex h-full w-full items-center justify-between text-gray-900 transition-colors duration-200",
+            "text-regular flex h-full w-full items-center justify-between text-gray-900 transition-colors duration-200",
             {
               "text-white group-hover:text-gray-900": isHome && !isScrolled,
             }
@@ -92,10 +92,6 @@ const Nav = () => {
               </Link>
             </div>
           </div>
-
-          {/* <div className="flex items-center h-full">
-            
-          </div> */}
         </nav>
         <MobileMenu />
       </header>

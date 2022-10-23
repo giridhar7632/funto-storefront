@@ -2,6 +2,7 @@ import clsx from "clsx"
 import { useCollections } from "medusa-react"
 import Link from "next/link"
 import CountrySelect from "../country-select"
+import Logo from "../logo"
 
 const FooterNav = () => {
   const { collections } = useCollections()
@@ -11,10 +12,12 @@ const FooterNav = () => {
       <div className="flex flex-col items-start justify-between gap-y-6 xsmall:flex-row">
         <div>
           <Link href="/">
-            <a className="text-xl-semi uppercase">Acme</a>
+            <a>
+              <Logo label="Funto" />
+            </a>
           </Link>
         </div>
-        <div className="text-small-regular grid grid-cols-2 gap-x-16">
+        <div className="text-base-regular grid grid-cols-2 gap-x-16">
           <div className="flex flex-col gap-y-2">
             <span className="text-base-semi">Collections</span>
             <ul
@@ -32,33 +35,34 @@ const FooterNav = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-y-2">
-            <span className="text-base-semi">Medusa</span>
+            <span className="text-base-semi">Socials</span>
             <ul className="grid grid-cols-1 gap-y-2">
               <li>
                 <a
-                  href="https://github.com/medusajs"
+                  href="https://instagram.com/mr_talla7632"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://twitter.com/@giridhar_talla"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/giridhar7632/funto-storefront"
                   target="_blank"
                   rel="noreferrer"
                 >
                   GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://docs.medusajs.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/medusajs/nextjs-starter-medusa"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Source code
                 </a>
               </li>
             </ul>
@@ -67,7 +71,7 @@ const FooterNav = () => {
       </div>
       <div className="flex flex-col-reverse justify-center gap-y-4 xsmall:flex-row xsmall:items-end xsmall:items-center xsmall:justify-between">
         <span className="text-xsmall-regular text-gray-500">
-          © Copyright 2022 ACME
+          © Copyright 2022 Funto
         </span>
         <div className="flex min-w-[316px] xsmall:justify-end">
           <CountrySelect />

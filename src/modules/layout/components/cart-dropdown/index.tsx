@@ -5,6 +5,7 @@ import useEnrichedLineItems from "@lib/hooks/use-enrich-line-items"
 import Button from "@modules/common/components/button"
 import LineItemOptions from "@modules/common/components/line-item-options"
 import LineItemPrice from "@modules/common/components/line-item-price"
+import Cart from "@modules/common/icons/cart"
 import Trash from "@modules/common/icons/trash"
 import Thumbnail from "@modules/products/components/thumbnail"
 import { formatAmount, useCart } from "medusa-react"
@@ -22,7 +23,16 @@ const CartDropdown = () => {
     <div className="z-50 h-full" onMouseEnter={open} onMouseLeave={close}>
       <Popover className="relative h-full">
         <Link href="/cart" passHref>
-          <Popover.Button className="h-full">{`My Bag (${totalItems})`}</Popover.Button>
+          <Popover.Button className="h-full">
+            <div className="relative p-2">
+              <Cart size={30} />
+              {totalItems ? (
+                <div className="absolute top-0 right-0 flex h-5 w-5 items-center justify-center rounded-full bg-brown text-white">
+                  {totalItems}
+                </div>
+              ) : null}
+            </div>
+          </Popover.Button>
         </Link>
         <Transition
           show={state}
@@ -36,7 +46,7 @@ const CartDropdown = () => {
         >
           <Popover.Panel
             static
-            className="absolute top-[calc(100%+1px)] right-0 hidden w-[382px] border-x border-b border-gray-200 bg-white text-gray-900 small:block"
+            className="absolute top-[calc(100%+1px)] right-0 hidden w-[382px] rounded-md border-x border-b border-textBtn bg-bgLight text-gray-900 small:block"
           >
             <div className="flex items-center justify-center p-4">
               <h3 className="text-large-semi">Shopping Bag</h3>
@@ -127,7 +137,7 @@ const CartDropdown = () => {
                     <Link href="/store">
                       <a>
                         <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
+                        <Button onClick={close}>Explore store</Button>
                       </a>
                     </Link>
                   </div>
