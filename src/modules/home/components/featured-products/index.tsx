@@ -10,13 +10,13 @@ const FeaturedProducts = () => {
     <div className="py-12">
       <div className="content-container py-12">
         <div className="mb-16 flex flex-col items-center text-center">
-          <span className="text-base-regular mb-6 text-gray-600">
-            Latest products
+          <span className="text-base-regular mb-6 text-textLight">
+            New Arrivals
           </span>
-          <p className="text-2xl-regular mb-4 max-w-lg text-gray-900">
-            Our newest styles are here to help you look your best.
+          <p className="text-2xl-regular mb-4 max-w-lg text-text">
+            Explore our newest styles are here to help you look your best.
           </p>
-          <UnderlineLink href="/store">Explore products</UnderlineLink>
+          <UnderlineLink href="/store">Go to Store</UnderlineLink>
         </div>
         <ul className="grid grid-cols-2 gap-x-4 gap-y-8 small:grid-cols-4">
           {data

@@ -13,19 +13,25 @@ const Hamburger: React.FC<HamburgerProps> = ({ setOpen }) => {
         <span
           aria-hidden="true"
           className={clsx(
-            "absolute block h-0.5 w-5 -translate-y-1.5 rounded-sm bg-current "
+            "-translate-y-1.8 absolute block h-0.5 w-5 rounded-sm bg-current "
           )}
         ></span>
         <span
           aria-hidden="true"
           className={clsx(
-            "absolute block  h-0.5 w-5 transform rounded-sm bg-current"
+            "absolute block  h-0.5 w-5 -translate-y-1 transform rounded-sm bg-current"
           )}
         ></span>
         <span
           aria-hidden="true"
           className={clsx(
-            "absolute block  h-0.5 w-5 translate-y-1.5 rounded-sm bg-current"
+            "absolute block  h-0.5 w-5 translate-y-1 transform rounded-sm bg-current"
+          )}
+        ></span>
+        <span
+          aria-hidden="true"
+          className={clsx(
+            "translate-y-1.8 absolute  block h-0.5 w-5 rounded-sm bg-current"
           )}
         ></span>
       </div>

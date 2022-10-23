@@ -27,7 +27,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           return (
             <button
               key={image.id}
-              className="relative h-14 w-12 border border-white"
+              className="relative h-14 w-12 rounded border border-white"
               onClick={() => {
                 handleScrollTo(image.id)
               }}
@@ -50,7 +50,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             <div
               ref={(image) => imageRefs.current.push(image)}
               key={image.id}
-              className="relative aspect-[29/34] w-full"
+              className="relative aspect-[29/34] w-full overflow-hidden rounded-md"
               id={image.id}
             >
               <Image
@@ -58,7 +58,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 layout="fill"
                 objectFit="cover"
                 priority={index <= 2 ? true : false}
-                className="absolute inset-0"
+                className="absolute inset-0 rounded-md"
                 alt={`Product image ${index + 1}`}
               />
             </div>

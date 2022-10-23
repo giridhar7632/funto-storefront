@@ -12,11 +12,11 @@ const ProductPreview = ({
   return (
     <Link href={`/products/${handle}`}>
       <a>
-        <div>
+        <div className="overflow-hidden rounded-md border-textBtn bg-[rgba(255,255,255,0.4)]">
           <Thumbnail thumbnail={thumbnail} size="full" />
-          <div className="text-base-regular mt-2">
+          <div className="text-lg-regular m-2 p-3">
             <span>{title}</span>
-            <div className="mt-1 flex items-center gap-x-2">
+            <div className="mt-1 flex items-center gap-x-2 font-serif text-xl font-semibold text-brown">
               {price ? (
                 <>
                   {price.price_type === "sale" && (

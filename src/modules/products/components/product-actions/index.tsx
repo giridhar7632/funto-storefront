@@ -27,14 +27,16 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
     <div className="flex flex-col gap-y-2">
       {product.collection && (
         <Link href={`/collections/${product.collection.id}`}>
-          <a className="text-small-regular text-gray-700">
+          <a className="text-small-regular text-textLight">
             {product.collection.title}
           </a>
         </Link>
       )}
-      <h3 className="text-xl-regular">{product.title}</h3>
+      <h3 className="text-2xl-regular font-sans font-medium text-text">
+        {product.title}
+      </h3>
 
-      <p className="text-base-regular">{product.description}</p>
+      <p className="text-base-regular text-textLight">{product.description}</p>
 
       {product.variants.length > 1 && (
         <div className="my-8 flex flex-col gap-y-6">
@@ -55,7 +57,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
 
       <div className="mb-4">
         {selectedPrice ? (
-          <div className="flex flex-col text-gray-700">
+          <div className="flex flex-col font-serif text-2xl font-semibold text-brown">
             <span
               className={clsx("text-xl-semi", {
                 "text-rose-600": selectedPrice.price_type === "sale",
@@ -83,7 +85,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
       </div>
 
       <Button onClick={addToCart}>
-        {!inStock ? "Out of stock" : "Add to cart"}
+        {!inStock ? "Out of Stock" : "Add to Cart"}
       </Button>
     </div>
   )

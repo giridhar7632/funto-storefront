@@ -46,7 +46,7 @@ const ImageOrPlaceholder = ({
       draggable={false}
     />
   ) : (
-    <div className="absolute inset-0 flex h-full w-full items-center justify-center bg-gray-100">
+    <div className="absolute inset-0 flex h-full w-full items-center justify-center rounded-md bg-[rgba(255,255,255,0.4)]">
       <PlaceholderImage size={size === "small" ? 16 : 24} />
     </div>
   )
